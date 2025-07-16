@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useNavigate, useLocation } from "react-router-dom";
-import Logo from "../assets/logo_12345-removebg-preview.png"
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import Logo from "../assets/Logo.webp";
+
 const Navbar = () => {
   const location = useLocation(); // Get current route
   const navigate = useNavigate();
@@ -11,27 +11,24 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Amenities", path: "/amenities" },
     { name: "Units", path: "/units" },
     { name: "Interior", path: "/interior" },
-    // { name: "Exterior ", path: "/exterior " },
     { name: "Exterior", path: "/exterior" },
     { name: "Project-Team", path: "/project-team" },
     { name: "Contact", path: "/contact" },
   ];
 
   return (
-    <nav className="bg-[#172D2D] h-36 px-6 py-4 flex items-center justify-between md:justify-around w-full" style={{ fontFamily: '"Montserrat' }}>
+    <nav
+      className="bg-[#172D2D] h-36 px-6 py-4 flex items-center justify-between md:justify-around w-full relative"
+      style={{ fontFamily: '"Montserrat"' }}
+    >
       {/* Logo */}
-      <div className="text-white font-semibold">
-      <Link to="/"> 
-        <img
-          src={Logo}
-          alt="VALOR VISTA"
-          className="max-h-56 w-auto "
-        />
-      </Link>
-    </div>
+      <div className="text-white font-semibold z-50">
+        <Link to="/">
+          <img src={Logo} alt="BARAIN" className="max-h-40 w-auto" />
+        </Link>
+      </div>
 
       {/* Mobile Menu Button */}
       <button
@@ -51,14 +48,14 @@ const Navbar = () => {
 
       {/* Nav Links */}
       <ul
-        className={`lg:flex bg-white rounded-lg lg:static absolute top-16 left-0 w-full lg:w-auto flex-col lg:flex-row transition-all duration-300 z-50 
+        className={`lg:flex flex-col lg:flex-row  bg-white lg:bg-transparent rounded-lg lg:rounded-none lg:static absolute top-36 left-0 w-full lg:w-auto shadow-lg lg:shadow-none transition-all duration-500 ease-in-out z-50
           ${isOpen ? "flex" : "hidden"}
         `}
       >
         {navItems.map((item, index) => (
           <li
             key={index}
-            className={`relative px-6 py-3 text-black text-sm font-semibold cursor-pointer transition-all duration-300 
+            className={`relative px-6 py-3 text-black lg:text-white text-base font-semibold cursor-pointer hover:bg-[#142B2B] hover:text-white transition-colors duration-300
               ${location.pathname === item.path ? "bg-[#142B2B] text-white" : ""}
             `}
             onClick={() => {

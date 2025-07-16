@@ -1,10 +1,5 @@
 import React from "react";
 import {
-  FaCreditCard,
-  FaClock ,
-  FaHardHat,
-  FaCamera,
-  FaUserCog,
   FaBuilding,
   FaCogs,
   FaKey,
@@ -14,30 +9,36 @@ import {
   FaRegFileAlt,
   FaRulerCombined,
   FaMicrochip,
-  FaSwimmingPool,
-  FaDumbbell,
-  FaSolarPanel,
 } from "react-icons/fa";
-
+import { FaHandHoldingHand } from "react-icons/fa6";
+import { IoCarSportSharp } from "react-icons/io5";
+import { TbHandFinger } from "react-icons/tb";
+import { GiCctvCamera, GiGate  } from "react-icons/gi";
+import { MdPayment } from "react-icons/md";
+ import { RxCountdownTimer  } from "react-icons/rx";
+  import { RiTeamLine } from "react-icons/ri";
+  import { FaRegThumbsUp } from "react-icons/fa";
+  import { CgKeyhole } from "react-icons/cg";
+  import { BiSolidDiscount } from "react-icons/bi";
+  import { TbTransferIn } from "react-icons/tb";
+  import { GrTechnology } from "react-icons/gr";
 const reasons = [
-  { icon: <FaCreditCard />, text: <>Ease of<br />Payment</> },
-  { icon: <FaClock  />, text: <>Timely Delivered<br />Projects</> },
-  { icon: <FaHardHat />, text: <>Best Structure<br />Design Team</> },
-  { icon: <FaCamera />, text: <>Triple Monitoring<br />and Surveillance</> },
-  { icon: <FaUserCog />, text: <>Employing the Best<br />M.E.P.</> },
-  { icon: <FaBuilding />, text: <>Modernized Facilities,<br />Features & Benefits</> },
-  { icon: <FaCogs />, text: <>Customization Options<br />Available</> },
-  { icon: <FaKey />, text: <>Ease of<br />Access</> },
-  { icon: <FaKey />, text: "Gated Community" },
-  { icon: <FaCar />, text: <>Each Apartment<br />Own Parking</> },
-  { icon: <FaPercentage />, text: <>Discount<br />Options</> },
+  { icon: <MdPayment />, text: <>Ease of<br />Payment</> },
+  { icon: <RxCountdownTimer  />, text: <>Timely Delivered<br />Projects</> },
+  { icon: <RiTeamLine />, text: <>Best Structure<br />Design Team</> },
+  { icon: <GiCctvCamera />, text: <>Triple Monitoring<br />and Surveillance</> },
+  { icon: <FaRegThumbsUp />, text: <>Employing the Best<br />M.E.P.</> },
+  { icon: <FaHandHoldingHand />, text: <>Modernized Facilities,<br />Features & Benefits</> },
+  { icon: <TbHandFinger />, text: <>Customization Options<br />Available</> },
+  { icon: <CgKeyhole />, text: <>Ease of<br />Access</> },
+  { icon: <GiGate  />, text: "Gated Community" },
+  { icon: <IoCarSportSharp />, text: <>Each Apartment<br />Own Parking</> },
+  { icon: <BiSolidDiscount />, text: <>Discount<br />Options</> },
   { icon: <FaTools />, text: <>Free Maintenance<br />(3 Month)</> },
-  { icon: <FaRegFileAlt />, text: <>Transferral on<br />Project Completion</> },
+  { icon: <TbTransferIn />, text: <>Transferral on<br />Project Completion</> },
   { icon: <FaRulerCombined />, text: <>High Ceilings &<br />Spacious Design</> },
-  { icon: <FaMicrochip />, text: <>Technologically Updated<br />Infrastructure</> },
-  { icon: <FaSwimmingPool />, text: "Swimming Pool" },
-  { icon: <FaDumbbell />, text: "Gym" },
-  { icon: <FaSolarPanel />, text: <>Solar & Generator<br />Backup</> },
+  { icon: <GrTechnology />, text: <>Technologically Updated<br />Infrastructure</> },
+
 ];
 
 

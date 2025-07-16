@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import bgunit from "./unitbg.webp";
 import heroImage from "./hEROBG.webp";
-import logo from "./logo_12345-removebg-preview.webp";
+import logo from "./Logo.webp";
 import type2 from "./TYPE2.webp";
 import modern1 from "./38.webp"
 import modern2 from "./114.webp"
@@ -11,13 +11,13 @@ import modern2 from "./114.webp"
 
 // 1kbh
 
-import type1 from "./one/3type1.webp"
-import first from "./one/3type2.webp"
-import type3 from "./one/3type3.webp"
-// 3kbh
-import bedtype2 from "./three/bedtype2.webp"
-import bedtype3 from "./three/bedtype3.webp";
-import bedtype1 from "./three/bedtype1.webp"
+import type1 from "./one/3type1.jpeg"
+import first from "./one/3type2.jpeg"
+import type3 from "./one/3type3.jpeg"
+import type4 from "./one/type3.jpeg"
+// 2kbh
+import bedtype2 from "./three/bedtype2.jpeg"
+import bedtype3 from "./three/bedtype3.jpeg";
 
 
 const MasterPlan = () => {
@@ -42,8 +42,8 @@ const MasterPlan = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? selectedImages.length - 1 : prevIndex - 1));
   };
 
-  const UNITS = [{ name: "3 BED ", level: "TYPE-2", size: "174.54 SQM.", images: [type1, first, type3] }];
-  const threeBKH = [{ name: "3 BED", level: "TYPE-1", size: "248.7 SQM.", images: [ bedtype2, bedtype3, bedtype1] }];
+  const UNITS = [{ name: "2 BED ", level: "TYPE-1", size: "174.54 SQM.", images: [type1, first, type3, type4] }];
+  const threeBKH = [{ name: "1 BED", level: "TYPE-1", size: "248.7 SQM.", images: [bedtype2, bedtype3] }];
   // const SKYPLEX = [{ name: "Pent House", level: "PREMIUM", size: "221.35 SQM.", images: [Pent, Pent2, Pent3, Pent4, Pent5, Pent6, Pent7] }];
 
   return (
@@ -73,31 +73,44 @@ const MasterPlan = () => {
           <div className="flex flex-col md:flex-row items-center gap-10">
             {/* Text on the Left */}
             <div className="md:w-1/2 text-left">
-              <h3 className="text-white text-2xl tracking-wide mb-4">3 BED VILLAS – TYPE 2</h3>
+              <h3 className="text-white text-2xl tracking-wide mb-4">2 BED LODGES – SKYVIEW RESIDENCES</h3>
               <p className="text-white text-lg leading-relaxed">
-                A Harmonious Blend of Space, Style & Functionality <br />
-                The 3 Bed Villas ( Type 2 ) a t Valor Vista are designed t o redefine modern family
-                living . Spanning across three efficiently planned levels, each villa offers a perfect
-                balance o f privacy and openness, natural light and smart zoning .
+                A Seamless Harmony of Elevation, Comfort & Contemporary Living<br />
+                The Skyview Villas at Barian Pine Lodges are thoughtfully designed to deliver an exceptional hillside living
+                experience. Built on three vertically aligned floors above road level, each residence merges functional zoning with
+                scenic luxury — offering residents space to breathe, relax, and reconnect with nature, all while enjoying the
+                comfort of modern design.
               </p>
               <h3 className="text-white text-2xl tracking-wide mb-4">Ground Floor</h3>
               <p className="text-white text-lg leading-relaxed">
-                Welcoming you with a covered private porch and car park, the ground floor features a spacious master
-                bedroom with en-suite bath, offering convenience and comfort for guests or elders. The design also includes
-                green buffers to maintain privacy and a welcoming visual aesthetic.
+                WelcomingAs you enter directly from the road, the Ground Floor welcomes you with a
+                secure double car garage, private entry lobby, storage, laundry zone, and a cozy rear-side terrace. This level offers
+                a perfect mix of convenience and utility, ideal for both short stays and permanent living.
               </p>
+              <br />
               <h3 className="text-white text-2xl tracking-wide mb-4">First Floor</h3>
               <p className="text-white text-lg leading-relaxed">
-                A contemporary open-plan kitchen, dedicated dining space, and bright lounge area flow seamlessly to encourage
-                family bonding and entertaining. A powder room, laundry area, and hallway with vertical connection to other
-                floors ensure convenience without clutter.
+
+                The heart of the home lies here — an open-plan living lounge, a beautifully lit dining area,
+                and a modern kitchen crafted for gatherings and connection. A compact powder room and access to a
+                balcony bring in natural light, creating a bright and lively family space. Every element on this level is
+                designed to foster comfort and togetherness.
               </p>
+              <br />
               <h3 className="text-white text-2xl tracking-wide mb-4">Second Floor</h3>
               <p className="text-white text-lg leading-relaxed">
-                This level includes two beautifully appointed bedrooms, a common bath, ample closet space, and a relaxing
-                terrace sit-out, making it ideal for families who value both indoor and outdoor living experiences.
+                The private bedroom zone offers two elegant rooms with wide windows, smart closets,
+                and shared bathroom access. A spacious terrace at the rear provides a tranquil sit-out area, perfect for
+                unwinding with forest views or hosting an intimate sunset tea.
               </p>
-      
+              <br />
+              <h3 className="text-white text-2xl tracking-wide mb-4">Rooftop</h3>
+              <p className="text-white text-lg leading-relaxed">
+                A beautifully designed rooftop terrace crowns the Skyview Villa — complete with pergola sitting
+                and panoramic views of the Murree hills and pine canopy. The Mumty provides covered access, making this
+                floor usable year-round as a retreat, barbecue space, or quiet lounge.
+              </p>
+
 
             </div>
 
@@ -114,7 +127,7 @@ const MasterPlan = () => {
       </div>
       {/* 3BED-TYPE 2 Section */}
       <div className="bg-white h-full text-[#142B2B] text-center py-28">
-        <h2 className="text-5xl md:text-6xl font-bold drop-shadow-lg">3BED-TYPE 2</h2>
+        <h2 className="text-5xl md:text-6xl font-bold drop-shadow-lg">2 BED LODGES – SKYVIEW RESIDENCES</h2>
         <div className='w-full flex justify-around'>
           <div className="relative w-80 mt-2 border-t my-12 border-gray-500"></div>
         </div>
@@ -150,34 +163,36 @@ const MasterPlan = () => {
           <div className="flex flex-col md:flex-row items-center gap-10">
             {/* Text on the Left */}
             <div className="md:w-1/2 text-left">
-              <h3 className="text-white text-2xl tracking-wide mb-4">3 BED VILLAS – TYPE 1</h3>
+              <h3 className="text-white text-2xl tracking-wide mb-4"> 1 BED LODGES – VALLEYVIEW RESIDENCES</h3>
               <p className="text-white text-lg leading-relaxed">
-                Elevated Design for Modern Urban Living <br />
-                The 3 Bed Villas ( Type 1 ) a t Valor Vista present a refined interpretation o f
-                contemporary architecture , optimized for comfort , light , and elegance . With a
-                wider frontage and larger plot depth , these villas are designed t o offer a grander
-                sense o f space across three thoughtfully crafted levels.
+                Immersive Nature Living with Thoughtful Privacy & Cozy Elegance<br />
+                The Valleyview Villas at Barian Pine Lodges offer a unique hillside experience—
+                nestled gently beneath road level and surrounded by nature on all sides. These
+                two-level residences are designed for those who seek peaceful retreat-style
+                living, with private terraces, lush green outlooks, and interiors that embrace
+                calm, function, and style.
+                Immersive Nature Living with Thoughtful Privacy & Cozy Elegance
               </p>
-              <h3 className="text-white text-2xl tracking-wide mb-4">Ground Floor</h3>
+              <br />
+              <h3 className="text-white text-2xl tracking-wide mb-4">Garden Level Floor</h3>
               <p className="text-white text-lg leading-relaxed">
-                Welcoming you with a covered private porch and car park, the ground floor features a spacious master
-                bedroom with en-suite bath, offering convenience and comfort for guests or elders. The design also includes
-                green buffers to maintain privacy and a welcoming visual aesthetic.
+                Welcoming Designed for functional luxury Step down into the Garden Level
+                and you’re greeted by an expansive living room with oversizes windows that frame the surrounding forest
+                canopy. The open layout includes a smart kitchenette, a convenient powder room, and a beautiful terrace sit
+                out—perfect for morning coffee, reading, or quiet reflection amid the sounds of nature.
               </p>
-              <h3 className="text-white text-2xl tracking-wide mb-4">First Floor</h3>
+              <br />
+              <h3 className="text-white text-2xl tracking-wide mb-4">Forest Level Floor</h3>
               <p className="text-white text-lg leading-relaxed">
-                AThe first floor opens into a double lounge setting, ideal for family interaction and leisure. Two secondary
-                bedrooms, both with built-in closets and shared luxury bath access, offer restful retreats for children or guests.
-                This level enjoys abundant daylight through large fenestrations and includes seamless circulation through a wide
-                central hallway.
+                The Forest Level serves as the primary sleeping sanctuary. A spacious master
+                bedroom with dedicated dressing area, an attached bathroom, and a second wide terrace complete the layout
+                —offering direct connection to the compacted earth slope and hillside vegetation. The space is designed to
+                feel immersive, insulated, and deeply relaxing.
+                These units feature independent access and can serve as standalone residences,
+                private guest quarters, or luxury rental suites—making Valley view ideal for
+                personal use or passive investment.
 
 
-              </p>
-              <h3 className="text-white text-2xl tracking-wide mb-4">Second Floor</h3>
-              <p className="text-white text-lg leading-relaxed">
-                ThisThe rooftop is transformed into a private garden terrace, allowing homeowners to enjoy outdoor dining,
-                evening gatherings, or quiet reflection under the sky. With space for custom pergolas or rooftop seating, this
-                floor brings an extra layer of lifestyle elevation to your home.
               </p>
 
 

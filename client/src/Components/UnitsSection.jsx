@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const UnitsSection = () => {
   return (
     <div>
-     
+
 
       {/* Units Section */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 lg:h-screen items-center">
@@ -23,11 +23,18 @@ const UnitsSection = () => {
           <h2 className="text-2xl sm:text-5xl font-semibold tracking-wide text-[#142B2B]">
             UNITS
           </h2>
-          <div className="space-y-2 sm:space-y-4">
-            <p className="text-lg sm:text-2xl font-bold text-[#142B2B]">TOWN HOUSES</p>
-            <p className="text-lg sm:text-2xl font-bold text-[#142B2B]">3 Bed Apartments <br  />  <span className="block text-center">TYP-1</span></p>
-            <p className="text-lg sm:text-2xl font-bold text-[#142B2B]">3 Bed Apartments <br />  <span className="block text-center">TYP-2</span></p>
+          <div className="space-y-2 sm:space-y-4 text-center">
+            <p className="text-lg sm:text-2xl font-bold text-[#142B2B]">Lodges</p>
+            <p className="text-lg sm:text-2xl font-bold text-[#142B2B]">
+              1 Bed Apartments <br />
+              <span className="block text-center">TYP-1</span>
+            </p>
+            <p className="text-lg sm:text-2xl font-bold text-[#142B2B]">
+              2 Bed Apartments <br />
+              <span className="block text-center">TYP-1</span>
+            </p>
           </div>
+
           <Link to="/units" className="no-underline">
             <button className="mt-4 sm:mt-6 bg-[#142B2B] text-white px-4 sm:px-6 py-2 font-semibold rounded-md hover:bg-[#c08d31] transition">
               View More →

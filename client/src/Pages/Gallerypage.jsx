@@ -1,7 +1,7 @@
 // import React from 'react'
 // import Gallery from '../Components/Gallery/Gallery'
 import { lazy, Suspense, useState, useEffect } from 'react'
-import loadingImage from '../assets/logo_12345-removebg-preview.png';
+import loadingImage from '../assets/Logo.webp'; 
 const Gallery = lazy(() => import('../Components/Gallery/Gallery'))
 import { FaLongArrowAltUp } from "react-icons/fa";
 

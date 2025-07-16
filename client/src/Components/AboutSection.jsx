@@ -13,11 +13,11 @@ const AboutSection = () => {
 
       <div className="relative max-w-lg h-[77vh] 3/5 sm:h-3/5 text-white p-6 sm:p-8 bg-black bg-opacity-70 rounded-lg mx-auto sm:ml-10 space-y-14 sm:space-y-16">
         <h2 className="text-xl sm:text-3xl md:text-3xl font-semibold tracking-wide text-center sm:text-left leading-tight">
-          WHY VALOR VISTA?
+          WHY BARAIN?
         </h2>
 
         <p className="text-lg sm:text-base md:text-xl text-center sm:text-left leading-relaxed">
-          THE URBAN OASIS & Luxury Suites is a high-rise, state-of-the-Art building providing<br />
+          THE BARAIN & Luxury Suites is a high-rise, state-of-the-Art building providing<br />
           <span className="font-semibold">PREMIUM AND FUTUR ISTIC LIFESTYLE!</span>
         </p>
 

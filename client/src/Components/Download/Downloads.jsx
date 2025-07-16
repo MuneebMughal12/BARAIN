@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FaCogs, FaEye, FaFlask, FaHardHat, FaProjectDiagram } from "react-icons/fa";
 import { GiStoneStack, GiMountainCave } from "react-icons/gi";
 import { MdEngineering } from "react-icons/md";
-import Logo from "../../assets/logo_12345-removebg-preview.png"
+import Logo from "./Logo.webp"
 import bgteam from "./team.webp"
 
 const teamRoles = [
@@ -20,7 +20,7 @@ const Downloads = () => {
     <div>
       {/* Background Section */}
       <div className="relative w-full h-[64vh] overflow-hidden"
-      style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
+        style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
         <img src={bgteam} alt="Units Background" className="absolute top-0 left-0 w-full h-full " />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
           <motion.h1
@@ -46,11 +46,18 @@ const Downloads = () => {
           <div className="p-6 space-y-6">
             <h2 className="text-3xl font-bold tracking-wide">PROJECT TEAM</h2>
             <p className="text-xl leading-relaxed">
-              At Sapphire, we have partnered with leading architects, structural designers, seasoned engineers, and experienced real estate professionals to bring our vision to life — ensuring our clients receive only the best possible solutions.
-              Our comprehensive three-tiered quality monitoring system guarantees that excellence is maintained at every stage, from concept to completion.
+              At Sapphire , we have partnered with leading architects , structural
+              designers , seasoned engineers , and experienced real estate
+              professionals to bring our vision to life — ensuring our clients
+              receive only the best possible solutions. Our comprehensive threetiered quality monitoring system guarantees that excellence is
+              maintained at every stage, from concept to completion.
             </p>
             <p className="text-xl leading-relaxed">
-              What sets us apart is our self-sufficient operational model: from land ownership to construction, and all the way through to sales and marketing, every phase is managed in-house. This integrated approach enables us to confidently stand behind everything we develop, build, and deliver — all under the trusted name of Sapphire.
+              What sets us apart is our self-sufficient operational model: from land
+              ownership to construction , and all the way through to sales and
+              marketing , every phase is managed in-house . This integrated
+              approach enables us to confidently stand behind everything we
+              develop, build, and deliver — all under the trusted name of Sapphire
             </p>
 
           </div>
@@ -82,7 +89,7 @@ const Downloads = () => {
 
           </div>
           <div className="text-center md:text-right">
-            <h3 className="text-lg font-bold">JASMIL Properties</h3>
+            <h3 className="text-lg font-bold">GEoCon</h3>
             <p className="text-xs tracking-widest">SECURE. AFFORDABLE. COMFORT</p>
           </div>
         </div>

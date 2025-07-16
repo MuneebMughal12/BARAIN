@@ -66,11 +66,12 @@ const Forms = () => {
             Greater Accra,Ghana.</p>
 
           <p className="mt-4 text-2xl font-bold">Phone/WhatsApp:</p>
-          <p className="text-lg">+233 24 030 1874
+          <p className="text-lg">+92-333-3404585 <br />
+              +92-308-8528128
           </p>
 
           <p className="mt-4 text-2xl font-bold">Email:</p>
-          <p className="text-lg">pioneerghanaltd@gmail.com</p>
+          <p className="text-lg">geoconenterprises@outlook.com</p>
 
           <p className="mt-4 text-3xl font-bold">Social Media:</p>
           <div className="flex space-x-4 mt-2">

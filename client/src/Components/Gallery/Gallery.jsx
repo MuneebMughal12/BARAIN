@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import bgGallery from "./16.webp"
 import { motion } from "framer-motion";
 import volarimprison from "./volarimprison.webp"
 import logo from "./logo_12345-removebg-preview.webp"
 import volarimprison1 from "./volarimprison1.webp"
 import volarimprison2 from "./volarimprison2.webp"
 import volarimprison3 from "./volarimprison3.webp"
+import volarimprison4 from "./volarimprison4.webp"
+import volarimprison5 from "./volarimprison5.webp"
 // slider
 import ImageGallery1 from "./16.webp"
 import ImageGallery2 from "./15.webp"
@@ -19,12 +20,11 @@ import ImageGallery8 from "./48.webp"
 import ImageGallery9 from "./5.webp"
 import ImageGallery10 from "./50.webp"
 import ImageGallery11 from "./54.webp"
-import ImageGallery12 from "./61.webp"
-import ImageGallery13 from "./79.webp"
-import ImageGallery14 from "./9.webp"
+// import ImageGallery12 from "./61.webp"
+// import ImageGallery13 from "./79.webp"
+// import ImageGallery14 from "./9.webp"
 
-const images = [ImageGallery1, ImageGallery2, ImageGallery3, ImageGallery4, ImageGallery5, ImageGallery6, ImageGallery7, ImageGallery8, ImageGallery9, ImageGallery10, ImageGallery11,
-    ImageGallery12, ImageGallery13, ImageGallery14];
+const images = [ImageGallery1, ImageGallery2, ImageGallery3, ImageGallery4, ImageGallery5, ImageGallery6, ImageGallery7, ImageGallery8, ImageGallery9, ImageGallery10, ImageGallery11,];
 
 export default function Exterior() {
 
@@ -80,7 +80,7 @@ export default function Exterior() {
             <div className="bg-[#142B2B] text-white font-sans min-h-screen py-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:px-16 py-8">
                     <div className="w-full">
-                        <img src={volarimprison} alt="Valor Vista Entrance" className="w-full rounded-lg shadow-xl" />
+                        <img src={volarimprison1} alt="Valor Vista Entrance" className="w-full rounded-lg shadow-xl" />
                     </div>
                     <div className="flex flex-col justify-center items-start space-y-6 p-4 md:p-8">
                         <img src={logo} alt="Valor Vista Logo" className="h-80 w-80 object-contain" />
@@ -90,44 +90,28 @@ export default function Exterior() {
 
                 <div className="px-6 md:px-16 py-12 bg-[#1f4141] rounded-lg shadow-lg">
                     <div className="flex flex-col md:flex-row items-center gap-10">
-                        {/* Text on the Left */}
-                        <div className="md:w-1/2 text-left">
 
-                            <p className="text-white text-lg  leading-relaxed"
-                            >
-                                A Grand Welcome Begins Here <br />
-                                Step into sophistication through the iconic Valor Vista entrance—
-                                a bold statement of architectural finesse and urban luxury.
-                                Designed with a harmonious blend of wood-textured panels,
-                                natural stone cladding, vertical greenery, and sharp geometries,
-                                the front gate reflects the signature style and exclusivity of the
-                                community it protects.
-                            </p>
-                            <br />
-                            <p className="text-white text-lg leading-relaxed">
-                                From the towering gateway frame t o the elegant
-                                signage i n gold accents, every detail sets the
-                                tone for refined living . Day o r night , this
-                                entrance serves a s both a symbol o f security
-                                and a visual landmark — welcoming residents and
-                                guests into a world where lifestyle i s redefined
-                                from the very first impression .
-                            </p>
-
-
-
-                        </div>
-
-                        {/* Image on the Right */}
+                        {/* Left Image (replacing text) */}
                         <div className="md:w-1/2">
                             <img
-                                src={volarimprison1}
-                                alt="Valor Vista Alternate Angle"
+                                src={volarimprison3}
+                                alt="Valor Vista Side A"
+                                className=" inset-0 w-full h-full object-cover blur-0 opacity-50 rounded-lg shadow-lg"
+                            />
+                        </div>
+
+                        {/* Right Image */}
+                        <div className="md:w-1/2">
+                            <img
+                                src={volarimprison}
+                                alt="Valor Vista Side B"
                                 className="w-full rounded-lg shadow-lg"
                             />
                         </div>
+
                     </div>
                 </div>
+
             </div>
             {/* Extrior 2 image and name  */}
             <div className="bg-[#142B2B] text-white font-sans min-h-screen py-20">
@@ -145,43 +129,25 @@ export default function Exterior() {
 
                 <div className="px-6 md:px-16 py-12 bg-[#1f4141] rounded-lg shadow-lg">
                     <div className="flex flex-col md:flex-row items-center gap-10">
-                        {/* Text on the Left */}
-                        {/* Text on the Left */}
-                        <div className="md:w-1/2 text-left">
 
-                            <p className="text-white text-lg  leading-relaxed"
-                            >
-                                Rear Gate Overview – Seamless Function Meets Design <br />
-                                The rear entrance o f Valor Vista i s a perfect
-                                blend o f elegance and purpose . Thoughtfully
-                                designed t o mirror the architectural identity o f
-                                the main gate , i t offers secure access while
-                                maintaining aesthetic harmony . Lined with
-                                palms and accent greenery , this entryway
-                                ensures smooth vehicular movement , discreet
-                                deliveries, and private access for residents —
-                                without compromising the serene ambiance o f
-                                the community .
-                            </p>
-                            <br />
-                            <p className="text-white text-lg leading-relaxed">
-                                Whether arriving quietly or stepping out with ease, the rear gate
-                                represents continuity in design, calm in experience, and
-                                convenience in everyday living.
-                            </p>
-
-
-
-                        </div>
-
-                        {/* Image on the Right */}
+                        {/* Left Image (replacing text) */}
                         <div className="md:w-1/2">
                             <img
-                                src={volarimprison3}
-                                alt="Valor Vista Alternate Angle"
+                                src={volarimprison5}
+                                alt="Valor Vista Side A"
+                                className=" inset-0 w-full h-full object-cover blur-0 opacity-50 rounded-lg shadow-lg"
+                            />
+                        </div>
+
+                        {/* Right Image */}
+                        <div className="md:w-1/2">
+                            <img
+                                src={volarimprison4}
+                                alt="Valor Vista Side B"
                                 className="w-full rounded-lg shadow-lg"
                             />
                         </div>
+
                     </div>
                 </div>
                 <div className="relative  w-full h-screen overflow-hidden">
@@ -255,7 +221,7 @@ export default function Exterior() {
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
                         Experience 3D Volar Vista 3Bed Type-2
                     </h2>
-                  <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
                             autoPlay
                             loop
@@ -276,7 +242,7 @@ export default function Exterior() {
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
                         Experience 3D Volar Vista 3Bed Type-1
                     </h2>
-                  <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
                             autoPlay
                             loop

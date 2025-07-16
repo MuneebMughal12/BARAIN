@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
-import loadingImage from '../assets/logo_12345-removebg-preview.png';
+import loadingImage from '../assets/Logo.webp';
 import { FaLongArrowAltUp } from "react-icons/fa";
 
 // Lazy load components
@@ -42,8 +42,8 @@ const Home = () => {
       <div>
         <HeroSection />
         <CallBackForm />
-        <TowerSection />
         <TownHouseSection />
+        <TowerSection />
         <AboutSection />
         <Enquiry />
         <AmenitiesSection />

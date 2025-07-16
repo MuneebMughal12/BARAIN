@@ -4,7 +4,7 @@ import ABOUT from "./aboutusbg.webp";
 import Aminities from "./1.webp";
 import skydle from "./6.webp";
 import Ceo from "./imagechnage.webp";
-import Logo from "./logo_12345-removebg-preview.webp";
+import Logo from "./Logo.webp";
 
 const About = () => {
   return (
@@ -28,49 +28,48 @@ const About = () => {
       <div className="min-h-screen bg-[#142B2B] text-white px-6 sm:px-10 py-16 flex flex-col lg:flex-row gap-10">
         {/* Left Side */}
         <div className="lg:w-1/2 space-y-4">
-          <h1 className="text-3xl sm:text-4xl font-semibold">JASMIL Properties</h1>
-          <p className="text-sm uppercase tracking-widest">Secure | Affordable | Comfort</p>
+          <img src={Logo} alt="BARIAN" className="w-32 h-32 sm:w-40 sm:h-40 object-contain" />
           <h2 className="text-xl sm:text-2xl font-light">ABOUT US</h2>
-          <p className="text-lg sm:text-lg leading-relaxed">
-            A Tradition of Excellence, Integrity, and Service.
-          </p>
-          <p className="text-lg sm:text-lg leading-relaxed">
-            Jasmil Properties Limited is a Ghanaian-owned real <br /> estate and property management
-            company with strategic <br /> international partners. As one of the rapidly growing <br />
-          </p>
 
           <p className="text-lg sm:text-lg leading-relaxed">
-            real estate companies headquartered in Accra, Ghana, <br /> we specialize in the development of
-            both economical <br /> and premium residential and commercial properties.
+            GeoCon Enterprises is a multidisciplinary design and
+            development firm committed to <br /> delivering excellence in
+            architecture, construction, and real estate development. <br />
+            With a focus on innovation, sustainability, and timeless
+            design, GeoCon has earned <br /> a reputation for crafting
+            spaces that are both functional and inspiring. <br />
           </p>
+          <br />
+
           <p className="text-lg sm:text-lg leading-relaxed">
-            Our focus is on emerging and prime areas in Accra and
-            its environs.
+            From residential communities to commercial complexes
+            and bespoke villas,<br /> GeoCon offers end-to-end solutions—
+            covering architectural design, structural engineering, MEP
+            planning, <br />  interior  design,  and construction execution.
+            Each project reflects a commitment to quality, integrity,
+            and client satisfaction.
           </p>
-          <h3 className="text-lg sm:text-lg leading-relaxed">
-            Headquartered in Accra, Ghana, we specialize in developing both economical and premium residential and commercial properties in emerging and prime areas.
-          </h3>
-          <div>
-            <h3 className="text-lg sm:text-xl font-semibold">Head Office:</h3>
-            <p className="text-lg sm:text-lg">North Industrial Area, Accra.</p>
-          </div>
-          <img src={Logo} alt="Urban Oasis Logo" className="w-32 h-32 sm:w-40 sm:h-40 object-contain" />
+          <br />
+          <p className="text-lg sm:text-lg leading-relaxed">
+            Operating with a forward-thinking vision, GeoCon
+            continues to lead <br />the way in modern,  nature-integrated
+            developments—like the <br />Barian Pine Lodges in  Murree and
+            premium urban housing across Pakistan and beyond.
+          </p>
+
         </div>
 
         {/* Right Side */}
-        <div className="lg:w-1/2">
-          <h2 className="text-3xl sm:text-4xl font-light text-[#c08d31]">SUCCESSFUL PROJECTS</h2>
-          <ul className="mt-4 space-y-2">
-            {["The Golden Hive", "The Jasmil Heights", "The Jasmil Luxury", "Opulent Hills", "Luxe Vista", "Oserenity Manor", "Luxe Haven", "The Jasmil Heights", "The Urban Oasis"].map((project, index) => (
-              <li key={index} className="text-xl sm:text-2xl font-semibold">
+        <div className="lg:w-1/2 flex flex-col justify-center items-center h-screen">
+          <ul className="text-[#c08d31] space-y-6 text-center">
+            {["TOWN LODGES", "2 BED LODGES", "3 BED LODGES"].map((project, index) => (
+              <li key={index} className="text-4xl font-semibold ">
                 {project}
-                <p className="text-sm text-[#c08d31]">
-                  {project === "The Urban Oasis" ? "GREATER ACCRA, GHANA" : "Heart of Accra, Ghana"}
-                </p>
               </li>
             ))}
           </ul>
         </div>
+        
       </div>
 
       {/* Vision & Mission Section */}
@@ -83,21 +82,17 @@ const About = () => {
           <div className="relative">
             <h2 className="text-3xl sm:text-5xl font-bold mb-4 text-center">Vision</h2>
             <p className="text-lg sm:text-2xl leading-relaxed">
-              Valor Vista is redefining modern living in Ghana, blending luxury and natural elegance. We focus on quality, sustainability, and lifestyle excellence.
+              To be recognized as the premier luxury mountain retreat in
+              Pakistan , offering a unique blend of modern living and natural
+              serenity. We envision Barian Pine Lodges Murree as a symbol of
+              timeless elegance, where every guest experiences the peace of pine-covered hills, the warmth of refined design, and the essence of
+              sustainable, high-altitude living.
               <p></p>
               <br />
-              We are committed to delivering top-tier construction
-              , superior aesthetics, anda lifestyle that resonates with sophistication
-              . Valor Vista embodies the essence of high-standard living
-              —offering smartly designed villas and townhouses tailored for both local and
-              international residents
-              <p></p>
-              <br />
-              With a focus on quality, sustainability, and innovation,
-              we aim toexceed expectations and provide an exceptional residential
-              experience. Valor Vista is not justa home—it’sa lifestyle redefined.
+              Our goal is to set a new benchmark for Eco-conscious hospitality
+              and hill-station living in South Asia
             </p>
-            
+
             <div className="absolute border-black top-0 right-0 border-t-4 border-r-4 w-16 h-16"></div>
           </div>
 
@@ -105,15 +100,18 @@ const About = () => {
           <div className="relative">
             <h2 className="text-3xl sm:text-5xl font-bold mb-4 text-center">Mission</h2>
             <p className="text-lg sm:text-2xl leading-relaxed">
-              To become a leading name in Ghana’s real estate by offering high-quality, sustainable homes. We deliver innovative, elegant, and functional living experiences.
-                     <p></p> <br />
-              To consistently exceed client expectations by delivering premium
-              -quality homes  that blend innovation, elegance, and functionality
-              . At Valor Vista , we are committed to timely project execution
-              , customer -focused design, and the highest
-              standards of professionalism, ethics, and craftsmanship in Ghana
-              ’s evolving real estate landscape  .
+              At Barian Pine Lodges Murree, our mission is to create a sanctuary of luxury,
+              tranquility, and natural harmony in the heart of the Barian Hills Murree. We are
+              dedicated to offering an exceptional mountain retreat experience through
+              thoughtfully designed lodges that blend modern comfort with rustic charm.
+              <p></p> <br />
+              With a focus on quality, sustainability, and innovation,
+              we aim to exceed expectations and provide an exceptional residential
+              experience. Valor Vista is not just a home—it’s a lifestyle redefined.
+
             </p>
+            <br />
+
             <div className="absolute bottom-0 border-black -left-6 border-b-4 border-l-4 w-16 h-16"></div>
           </div>
           <div className="relative">

@@ -1,7 +1,7 @@
 
 import { lazy, Suspense, useState, useEffect } from 'react'
 import { FaLongArrowAltUp } from "react-icons/fa"
-import loadingImage from '../assets/logo_12345-removebg-preview.png';
+import loadingImage from '../assets/Logo.webp'; 
 const Contact = lazy(() => import('../Components/Contact/Contact'))
 
 

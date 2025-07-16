@@ -1,24 +1,24 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import logo from "../assets/logo_12345-removebg-preview.png"
+import logo from "../assets/Logo.webp";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-black py-10 px-4 border-t-2 border-black relative" style={{ fontFamily: "Montserrat" , textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
+    <footer className="bg-white text-black py-10 px-4 border-t-2 border-black relative" style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
       {/* Main Footer Content */}
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start">
-        
+
         {/* Left Section - Logo & Contact */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <img src={logo}alt="Skydale Logo" className="h-56" />
+          <img src={logo} alt="Skydale Logo" className="h-56" />
           {/* <p className="text-xl font-semibold tracking-wide mt-2">LIVE ON CLOUD 9</p> */}
 
           <div className="mt-4 text-sm">
-            <p className="text-xl"><strong>CALL :</strong> +233240301874 <br /> +27734484461</p>
-            <p className="text-xl"><strong>TELEFA :</strong> +233302245348ery tr</p>
-            <p className="text-xl"><strong>WhatsApp :</strong>+233240301874 </p>
-            <p className="text-xl"><strong>EMAIL :</strong> <a href="mailto:pioneerghanaltd@gmail.com" className="underline">pioneerghanaltd@gmail.com</a></p>
-        
+            <p className="text-xl"><strong>CALL :</strong> +92-333-3404585 <br />
+              +92-308-8528128</p>
+            <p className="text-xl"><strong>Social networks @ :</strong>barainpinelodges </p>
+            <p className="text-xl"><strong>EMAIL :</strong> <a href="mailto:geoconenterprises@outlook.com" className="underline">geoconenterprises@outlook.com</a></p>
+
             <p className="mt-2 text-xl"><strong>ADDRESS :</strong></p>
             <p className="text-lg">Plot No.146 c, Street Sechni, Block 1, Parcel 146,</p>
             <p className="text-lg">Shewn Edgeed Pink, North Airport Residential,</p>
@@ -55,16 +55,16 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-         {/* Footer Bottom */}
+      {/* Footer Bottom */}
       <div className="mt-8 text-lg text-gray-600 text-center">
         <p>
-          Keywords: 3bed type-2 in VOLAR-VISTA, 3bed type-1 in VOLAR-VISTA,  luxury apartments, etc.
+          Keywords: 2bed type-1 in BARIAN, 1bed type-1 in BARIAN,  luxury apartments, etc.
         </p>
         <p className="mt-4">
-          © 2025 by VOLAR-VISTA. Proudly created with <a href="https://github.com/MuneebMughal12" target="_blank" rel="noopener noreferrer" className="underline">Muneeb Aziz</a>.
+          © 2025 by BARIAN. Proudly created with <a href="https://github.com/MuneebMughal12" target="_blank" rel="noopener noreferrer" className="underline">Muneeb Aziz</a>.
         </p>
       </div>
-     
+
 
     </footer>
   );
