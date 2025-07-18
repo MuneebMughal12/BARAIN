@@ -13,6 +13,7 @@ import Download from "./Pages/Download";
 import Interior from "./Pages/Interior";
 import Logo from "./assets/Logo.webp"; 
 import Onedbedpage from "./Pages/Onedbedpage"
+import Twodbedpage from "./Pages/Twodbedpage";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -54,6 +55,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/units" element={<Unitspage />} />
           <Route path="/units/bed-1" element={<Onedbedpage />} />
+          <Route path="/units/bed-2" element={<Twodbedpage />} />
           <Route path="/exterior" element={<Gallerypage />} />
           <Route path="/contact" element={<Contactus />} />
           <Route path="/project-team" element={<Download />} />

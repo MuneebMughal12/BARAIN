@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import bgteam from "../unitbg.webp";
 import { motion } from "framer-motion";
-import img1 from "./1 Bed Lodges Furnished_1.webp";
-import img2 from "./1 Bed Lodges Furnished_2.webp";
-import img3 from "./1 Bed Lodges Furnished_3.webp";
-import img4 from "./1 Bed Lodges Furnished_4.webp";
-import img5 from "./1 Bed Lodges Furnished_5.webp";
+import img1 from "./2 Bed Lodges Furnished_1.webp";
+import img2 from "./2 Bed Lodges Furnished_2.webp";
+import img3 from "./2 Bed Lodges Furnished_3.webp";
+import img4 from "./2 Bed Lodges Furnished_4.webp";
+import img5 from "./2 Bed Lodges Furnished_5.webp";
 
 const Bed = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
@@ -34,7 +34,7 @@ const Bed = () => {
             transition={{ duration: 1 }}
             className="text-4xl md:text-6xl font-bold"
           >
-            1 BED
+            2 BED
           </motion.h1>
         </div>
       </div>
