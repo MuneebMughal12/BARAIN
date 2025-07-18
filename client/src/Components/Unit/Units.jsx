@@ -42,8 +42,8 @@ const MasterPlan = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? selectedImages.length - 1 : prevIndex - 1));
   };
 
-  const UNITS = [{ name: "2 BED ", level: "TYPE-1", size: "174.54 SQM.", images: [type1, first, type3, type4] }];
-  const threeBKH = [{ name: "1 BED", level: "TYPE-1", size: "248.7 SQM.", images: [bedtype2, bedtype3] }];
+  const UNITS = [{ name: "2 BED ", level: "TYPE-1", size: "1,973 STF.", images: [type1, first, type3, type4] }];
+  const threeBKH = [{ name: "1 BED", level: "TYPE-1", size: "948 STF.", images: [bedtype2, bedtype3] }];
   // const SKYPLEX = [{ name: "Pent House", level: "PREMIUM", size: "221.35 SQM.", images: [Pent, Pent2, Pent3, Pent4, Pent5, Pent6, Pent7] }];
 
   return (
@@ -211,7 +211,7 @@ const MasterPlan = () => {
       </div>
       {/* 3BED-TYPE 1 Section */}
       <div className="bg-white h-full text-[#142B2B] text-center py-28">
-        <h2 className="text-5xl md:text-6xl font-bold">3BED-TYPE 1</h2>
+        <h2 className="text-5xl md:text-6xl font-bold">1 BED LODGES – SKYVIEW RESIDENCES</h2>
         <div className='w-full flex justify-around'>
           <div className="relative w-80 mt-2 border-t my-12 border-gray-500"></div>
         </div>
