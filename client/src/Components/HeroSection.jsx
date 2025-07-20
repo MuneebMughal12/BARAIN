@@ -50,18 +50,18 @@ const HeroSection = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background vedio */}
-      {/* <video
+      <video
         autoPlay
         loop
         muted
         playsInline
         className="w-full h-full rounded-lg object-fill md:object-cover"
       >
-        <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1751367679/volarvista-bg_zes1fx.mp4"
+        <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1752904274/Clip_12_1_jqyzgg.mp4"
          type="video/mp4" />
         Your browser does not support the video tag.
-      </video> */}
-      <img src={BGimage} alt="Background" className="w-full h-full object-cover" />
+      </video>
+      {/* <img src={BGimage} alt="Background" className="w-full h-full object-cover" /> */}
 
 
 

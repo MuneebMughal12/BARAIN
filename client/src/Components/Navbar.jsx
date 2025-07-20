@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import Logo from "../assets/Logo.webp";
 
@@ -7,19 +7,11 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  const [mobileDropdown, setMobileDropdown] = useState(null); // track which dropdown is open on mobile
 
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    {
-      name: "Units",
-      path: "/units",
-      children: [
-        { name: "BED 1", path: "/units/bed-1" },
-        { name: "BED 2", path: "/units/bed-2" },
-      ],
-    },
+    { name: "Units", path: "/units" },
     { name: "Interior", path: "/interior" },
     { name: "Exterior", path: "/exterior" },
     { name: "Project-Team", path: "/project-team" },
@@ -28,12 +20,7 @@ const Navbar = () => {
 
   const handleNavigate = (path) => {
     setIsOpen(false);
-    setMobileDropdown(null);
     navigate(path);
-  };
-
-  const toggleMobileDropdown = (index) => {
-    setMobileDropdown(mobileDropdown === index ? null : index);
   };
 
   return (
@@ -73,51 +60,12 @@ const Navbar = () => {
         {navItems.map((item, index) => (
           <li
             key={index}
-            className={`group relative px-6 py-3 text-black lg:text-white text-base font-semibold cursor-pointer hover:bg-[#142B2B] hover:text-white transition-colors duration-300
+            className={`px-6 py-3 text-black lg:text-white text-base font-semibold cursor-pointer hover:bg-[#142B2B] hover:text-white transition-colors duration-300
               ${location.pathname === item.path ? "bg-[#142B2B] text-white" : ""}
             `}
+            onClick={() => handleNavigate(item.path)}
           >
-            {/* Main Link */}
-            <div
-              onClick={() =>
-                item.children && !isOpen
-                  ? handleNavigate(item.path) // desktop: navigate
-                  : item.children && isOpen
-                  ? toggleMobileDropdown(index) // mobile: toggle dropdown
-                  : handleNavigate(item.path) // normal links
-              }
-              className="flex items-center justify-between"
-            >
-              {item.name}
-              {item.children && (
-                <ChevronDown
-                  size={16}
-                  className={`ml-1 transform transition-transform duration-300 lg:inline ${
-                    mobileDropdown === index ? "rotate-180" : ""
-                  }`}
-                />
-              )}
-            </div>
-
-            {/* Dropdown */}
-            {item.children && (
-              <ul
-                className={`lg:absolute left-0 top-full lg:mt-2 bg-white text-black rounded-md shadow-lg w-48 lg:opacity-0 lg:invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50
-                ${mobileDropdown === index ? "block" : "hidden"} lg:block`}
-              >
-                {item.children.map((child, childIndex) => (
-                  <li
-                    key={childIndex}
-                    className={`px-4 py-2 hover:bg-[#172D2D] hover:text-white transition-colors duration-300
-                      ${location.pathname === child.path ? "bg-[#142B2B] text-white" : ""}
-                    `}
-                    onClick={() => handleNavigate(child.path)}
-                  >
-                    {child.name}
-                  </li>
-                ))}
-              </ul>
-            )}
+            {item.name}
           </li>
         ))}
       </ul>
