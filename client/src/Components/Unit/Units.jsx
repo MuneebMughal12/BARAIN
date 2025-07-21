@@ -5,7 +5,7 @@ import bgunit from "./unitbg.webp";
 import heroImage from "./hEROBG.webp";
 import logo from "./Logo.webp";
 // import type2 from "./TYPE2.webp";
-import Cloud from "./cloud.webp";
+import Cloud from "./Cloud.webp";
 import modern1 from "./38.webp"
 import modern2 from "./114.webp"
 import BlackLogo from "./BlackLogo.png"
