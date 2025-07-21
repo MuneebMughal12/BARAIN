@@ -1,10 +1,10 @@
 import React from "react";
-import bedroomImg from "./bedroom1.webp";
+import bedroomImg from "./bed1.webp";
 import bathroomImg from "./bath1.webp";
-import bed2 from "./bedroom2.webp";
+import bed2 from "./bed2.webp";
 import bath2 from "./bath2.webp";
 import logo from "./logo_12345-removebg-preview.webp";
-import bginterior from "./bginterior.webp";
+import bginterior from "./D5_Image 7_20230505_074849.webp";
 import { motion } from "framer-motion";
 
 const Interior = () => {
@@ -46,7 +46,7 @@ const Interior = () => {
                         <img
                             src={bathroomImg}
                             alt="Luxury Bathroom"
-                            className="w-full h-auto rounded shadow-lg"
+                            className="w-full h-[70vh] rounded shadow-lg"
                         />
                     </div>
                 </div>
@@ -85,7 +85,7 @@ const Interior = () => {
                         <img
                             src={bath2}
                             alt="Luxury Bathroom"
-                            className="w-full h-auto rounded shadow-lg"
+                            className="w-full h-[70vh] rounded shadow-lg"
                         />
                     </div>
                 </div>
@@ -110,7 +110,7 @@ const Interior = () => {
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                     
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       Experience 3D Volar Vista Bed
+                       Experience 3D BARIAN Bed 
                     </h2>
                     <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
@@ -120,7 +120,26 @@ const Interior = () => {
                             playsInline
                             className="w-full  rounded-lg object-cover"
                         >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1751368295/M_qzte6t.mp4" type="video/mp4" />
+                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753092199/Bed_Interior_1.1_fgd9tb.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+
+                    </div>
+                </div>
+                <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
+                    
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
+                       Experience 3D BARIAN Bed 2 
+                    </h2>
+                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full  rounded-lg object-cover"
+                        >
+                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753092207/Bed_Interior_2.2_fyavaf.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
 
@@ -130,7 +149,7 @@ const Interior = () => {
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                      <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       Experience 3D Volar Vista Bath
+                       Experience 3D BARIAN Bath
                     </h2>
                     <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
@@ -140,7 +159,7 @@ const Interior = () => {
                             playsInline
                             className="w-full  rounded-lg object-cover"
                         >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1751368278/J_fbtaxy.mp4" type="video/mp4" />
+                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753092199/Bath_Interior_2.3_rnvs0y.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
 
@@ -150,7 +169,7 @@ const Interior = () => {
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                      <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       Experience 3D Volar Vista Kitchen
+                       Experience 3D BARIAN Kitchen
                     </h2>
                     <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
@@ -160,7 +179,7 @@ const Interior = () => {
                             playsInline
                             className="w-full  rounded-lg object-cover"
                         >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1751368284/K_dbhepd.mp4" type="video/mp4" />
+                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753093019/Kitchen_2_mqbwat.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
 
@@ -170,7 +189,7 @@ const Interior = () => {
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                      <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       Experience 3D Volar Vista Tv lounge
+                       Experience 3D BARIAN Tv lounge
                     </h2>
                     <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
@@ -180,7 +199,7 @@ const Interior = () => {
                             playsInline
                             className="w-full  rounded-lg object-cover"
                         >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1751368480/L_itenmj.mp4" type="video/mp4" />
+                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753093024/Loungh_2_c98pty.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
 

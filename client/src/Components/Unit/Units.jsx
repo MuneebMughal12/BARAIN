@@ -6,6 +6,8 @@ import heroImage from "./hEROBG.webp";
 import logo from "./Logo.webp";
 // import type2 from "./TYPE2.webp";
 import Cloud from "./Cloud.webp";
+import Logo from "./Logo.webp";
+import LodgeImage from "./38.webp";
 import modern1 from "./38.webp"
 import modern2 from "./114.webp"
 import BlackLogo from "./BlackLogo.png"
@@ -13,39 +15,24 @@ import BlackLogo from "./BlackLogo.png"
 // 1kbh
 
 import type1 from "./one/3type1.jpeg"
-import first from "./one/3type2.jpeg"
+import type2 from "./one/3type2.jpeg"
 import type3 from "./one/3type3.jpeg"
 import type4 from "./one/type3.jpeg"
 // 2kbh
-import bedtype2 from "./three/bedtype2.jpeg"
-import bedtype3 from "./three/bedtype3.jpeg";
+// import bedtype2 from "./three/bedtype2.jpeg"
+// import bedtype3 from "./three/bedtype3.jpeg";
 
 
 const MasterPlan = () => {
-  const [selectedImages, setSelectedImages] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const CARD_WIDTH_CLASS = "w-11/12 md:w-1/3 max-w-md";        // container width
+  const HEADING_SIZE_CLASS = "text-2xl md:text-4xl";            // heading font size
+  const TEXT_SIZE_CLASS = "text-base md:text-lg";           // paragraph font size
 
-  const openSlider = (images) => {
-    setSelectedImages(images);
-    setCurrentIndex(0);
-  };
 
-  const closeSlider = () => {
-    setSelectedImages([]);
-    setCurrentIndex(0);
-  };
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % selectedImages.length);
-  };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? selectedImages.length - 1 : prevIndex - 1));
-  };
-
-  const UNITS = [{ name: "2 BED ", level: "TYPE-1", size: "1,973 STF.", images: [type1, first, type3, type4] }];
-  const threeBKH = [{ name: "1 BED", level: "TYPE-1", size: "948 STF.", images: [bedtype2, bedtype3] }];
-  // const SKYPLEX = [{ name: "Pent House", level: "PREMIUM", size: "221.35 SQM.", images: [Pent, Pent2, Pent3, Pent4, Pent5, Pent6, Pent7] }];
+  // const UNITS = [{ name: "2 BED ", level: "TYPE-1", size: "1,973 STF.", images: [type1, first, type3, type4] }];
+  // const threeBKH = [{ name: "1 BED", level: "TYPE-1", size: "948 STF.", images: [bedtype2, bedtype3] }];
 
   return (
     <div style={{ fontFamily: 'Montserrat' }}>
@@ -61,7 +48,7 @@ const MasterPlan = () => {
       {/* 2bed type-1 Section description */}
       <div className="font-sans bg-white text-black relative">
         {/* Top Image with Cloud Overlay */}
-        <div className="relative w-full h-[100vh]">
+        <div className="relative w-full h-auto md:h-[100vh] overflow-hidden">
           <img
             src={heroImage}
             alt="Barian Lodges"
@@ -72,113 +59,395 @@ const MasterPlan = () => {
           <img
             src={logo}
             alt="Barian Logo"
-            className="absolute top-10 left-10 h-32 bg-white p-3 rounded-lg shadow-lg"
+            className="absolute top-10 left-10  h-16 md:h-32 bg-white p-3 rounded-lg shadow-lg"
           />
         </div>
 
         {/* Headings Positioned Separately, NOT inside image */}
-        <div className="relative z-10 font-montserrat font-semibold text-center py-16 px-4 md:px-20 bg-white">
-          {/* Cloud Image Positioned Bottom */}
+        <div className="relative z-10 font-montserrat font-semibold text-center py-8 px-4 md:py-16 md:px-20 bg-white mb-0">
+
+          {/* Cloud only on desktop */}
           <img
             src={Cloud}
             alt="Cloud"
-            className="absolute bottom-80 left-0 w-full h-full object-cover"
+            className="hidden md:block absolute bottom-80 left-0 w-full h-full object-cover"
           />
 
-          {/* Overlay Text */}
-          <div className="absolute top-24 left-1/2 transform -translate-x-1/2 text-center z-20">
-            <h1 className="text-5xl text-[#142B2B] font-bold mb-4">2 Bed Lodges</h1>
-            <h2 className="text-2xl font-semibold text-[#142B2B] mb-2">Skyview Residences</h2>
-            <p className="text-[#c08d31] text-xl mb-6">“Three Levels of Elevated Living”</p>
+          {/* Overlay text: static on mobile, absolute on md+ */}
+          <div className="relative md:absolute md:top-24 md:left-1/2 md:transform md:-translate-x-1/2 text-center z-20">
+            <h1 className="text-2xl md:text-5xl text-[#142B2B] font-bold mb-2">
+              2 Bed Lodges
+            </h1>
+            <h2 className="text-lg md:text-2xl font-semibold text-[#142B2B] mb-1">
+              Skyview Residences
+            </h2>
+            <p className="text-base md:text-xl text-[#c08d31] mb-6">
+              “Three Levels of Elevated Living”
+            </p>
           </div>
 
-          {/* Section with Background Image */}
-          <div
-            className="mt-56 bg-cover bg bg-no-repeat"
-            style={{
-            }}
-          >
-            <p className="max-w-3xl font-bold text-[#142B2B] mx-auto text-lg leading-relaxed mb-10 pt-16">
+          {/* Main copy */}
+          <div className="mt-4 md:mt-56 bg-cover bg-no-repeat">
+            <p className="max-w-3xl mx-auto font-bold text-[#142B2B] text-lg leading-relaxed mb-4">
               A Seamless Harmony of Elevation, Comfort & Contemporary Living
             </p>
-            <p className="max-w-4xl font-semibold mx-auto text-lg text-[#142B2B] leading-relaxed pb-8">
-              The Skyview Villas at Barian Pine Lodges are thoughtfully designed to deliver an exceptional hillside living experience.
-              Built on three vertically aligned floors above road level, each residence merges functional zoning with scenic luxury — offering residents space to breathe, relax, and reconnect with nature, all while enjoying the comfort of modern design.
+            <p className="max-w-4xl mx-auto font-semibold text-[#142B2B] text-base md:text-lg leading-relaxed mb-8">
+              The Skyview Villas at Barian Pine Lodges are thoughtfully designed to deliver an
+              exceptional hillside living experience. Built on three vertically aligned floors
+              above road level, each residence merges functional zoning with scenic luxury —
+              offering residents space to breathe, relax, and reconnect with nature.
             </p>
-
-            <hr className="border-gray-300 my-8 w-1/2 mx-auto" />
-
-            <p className="text-lg md:text-xl font-semibold text-[#142B2B] max-w-xl mx-auto leading-relaxed pb-16">
-              Crafted with precision and nestled in nature, Skyview Villas reflect the Barian Pine Lodges vision of
-              "Elevated Living in Harmony with Nature." These homes are not just functional — they're soulful, scenic, and timeless.
+            <hr className="border-gray-300 my-6 w-1/2 mx-auto" />
+            <p className="text-base md:text-xl font-semibold text-[#142B2B] max-w-xl mx-auto leading-relaxed pb-6">
+              Crafted with precision and nestled in nature, Skyview Villas reflect the Barian
+              Pine Lodges vision of "Elevated Living in Harmony with Nature." These homes are
+              not just functional — they're soulful, scenic, and timeless.
             </p>
           </div>
         </div>
-
-
       </div>
 
 
-      {/* 2BED-TYPE 1 Section */}
-     <div className="w-full">
-  {/* Top Image */}
-<div className="w-full">
-  <img
-    src={type1}
-    alt="Top View"
-    className="w-full h-[108vh] object-contain"  />
-</div>
+      {/* 2BED-TYPE ground */}
+      <div className="w-full">
+        {/* Top Image */}
+        <div className="w-full overflow-hidden">
+          <img
+            src={type1}
+            alt="Top View"
+            className="w-full h-auto md:h-[108vh] object-contain"
+          />
+        </div>
 
-  {/* Bottom Section */}
- <div className="flex flex-col md:flex-row bg-white relative">
-  {/* Left Side */}
-  <div className="md:w-1/2 w-full flex flex-col p-6 md:p-8">
-    <img
-      src={heroImage} // 👈 Your left image
-      alt="Front View"
-      className="w-full h-auto rounded-md shadow-lg mb-4"
-    />
-    <p className=" text-lg md:text-xl font-medium text-center text-gray-800">
-      “Where the first impression lasts forever”
-    </p>
-  </div>
+        {/* Bottom Section */}
+        <div className="flex flex-col md:justify-around md:flex-row bg-white">
+          {/* Left Side */}
+          <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col items-center">
+            <img
+              src={heroImage}
+              alt="Front View"
+              className="w-full h-auto rounded-md shadow-lg mb-4"
+            />
+            <p className="text-base md:text-2xl font-bold text-center text-[#142B2B]">
+              “Where the first impression lasts forever”
+            </p>
+          </div>
 
-  {/* Right Side */}
-  <div className="md:w-1/2 w-full bg-[#f7f3eb] p-6 md:p-10 relative flex flex-col justify-center">
-    {/* Badge */}
-    <div className="absolute top-6 right-6">
-      <img
-        src={BlackLogo} // 👈 Your badge/logo
-        alt="Badge"
-        className="w-16 h-16 object-contain"
-      />
+          {/* Right Side */}
+          <div
+            className={`
+        ${CARD_WIDTH_CLASS}
+        bg-[#f7f3eb]
+        p-6 md:p-10
+        relative flex flex-col justify-center
+        mx-auto md:mx-0
+      `}
+          >
+            {/* Badge */}
+            <div className="absolute top-6 right-6">
+              <img src={BlackLogo} alt="Badge" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+            </div>
+
+            {/* Heading */}
+            <h2 className={`${HEADING_SIZE_CLASS} text-center  mb-6`}>
+              Ground Floor
+            </h2>
+
+            {/* Description */}
+            <p className={`${TEXT_SIZE_CLASS} text-center font-bold  leading-relaxed mb-8`}>
+              Welcoming as you enter directly from the <br /> road, the Ground Floor welcomes you
+              <br />with a secure double car garage, private <br /> entry lobby, storage, laundry zone,
+              and a <br /> cozy rear-side terrace. This level offers a <br /> perfect mix of convenience
+              and utility, <br /> ideal for both short stays and permanent
+              <span className="block text-center">living</span> .
+            </p>
+
+            {/* Stats */}
+            <div className="space-y-2 text-center ">
+              <p className={`${TEXT_SIZE_CLASS} font-semibold`}>
+                <span className="font-bold">Covered Area:</span> 620.530 sft
+              </p>
+              <p className={`${TEXT_SIZE_CLASS} font-semibold`}>
+                <span className="font-bold">Total Covered Area:</span> 1,973.00 sft
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 2BED-TYPE second floor */}
+      <div className="w-full">
+        {/* Top Image */}
+        <div className="w-full overflow-hidden">
+          <img
+            src={type2}
+            alt="Top View"
+            className="w-full h-auto md:h-[108vh] object-contain"
+          />
+        </div>
+
+        {/* Bottom Section */}
+        <div className="flex md:justify-around flex-col md:flex-row bg-white">
+          {/* Left Side */}
+          <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col items-center">
+            <img
+              src={heroImage}
+              alt="Front View"
+              className="w-full h-auto rounded-md shadow-lg mb-4"
+            />
+            <p className="text-base md:text-2xl font-bold text-center text-[#142B2B]">
+              “Nature at Your Doorstep, <br />
+              Luxury in Every Detail”
+            </p>
+          </div>
+
+          {/* Right Side */}
+          <div
+            className={`
+        ${CARD_WIDTH_CLASS}
+        bg-[#f7f3eb]
+        p-6 md:p-10
+        relative flex flex-col justify-center
+        mx-auto md:mx-0
+      `}
+          >
+            {/* Badge */}
+            <div className="absolute  top-6 right-6">
+              <img src={BlackLogo} alt="Badge" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+            </div>
+
+            {/* Heading */}
+            <h2 className={`${HEADING_SIZE_CLASS} text-center  mb-6`}>
+              First Floor
+            </h2>
+
+            {/* Description */}
+            <p className={`${TEXT_SIZE_CLASS} text-center font-bold   leading-relaxed mb-8`}>
+              The heart of the home lies here — an open<br />  plan living lounge, a beautifully lit dining
+              <br /> area, and a modern kitchen crafted for <br />  gatherings and connection. A compact <br />
+              powder room and access to a balcony <br /> bring in natural light, creating a bright <br />
+              and lively family space. Every element on <br />  this level is designed to foster comfort and
+              <span className="block text-center">togetherness.</span>
+            </p>
+
+            {/* Stats */}
+            <div className="space-y-2 text-center ">
+              <p className={`${TEXT_SIZE_CLASS} font-semibold`}>
+                <span className="font-bold">Covered Area:</span> 620.530 sft
+              </p>
+              <p className={`${TEXT_SIZE_CLASS} font-semibold`}>
+                <span className="font-bold">Total Covered Area:</span> 1,973.00 sft
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* 2BED-TYPE  Second Floor */}
+      <div className="w-full">
+        {/* Top Image */}
+        <div className="w-full overflow-hidden">
+          <img
+            src={type3}
+            alt="Top View"
+            className="w-full h-auto md:h-[108vh] object-contain"
+          />
+        </div>
+
+        {/* Bottom Section */}
+        <div className="flex md:justify-around flex-col md:flex-row bg-white">
+          {/* Left Side */}
+          <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col items-center">
+            <img
+              src={heroImage}
+              alt="Front View"
+              className="w-full h-auto rounded-md shadow-lg mb-4"
+            />
+            <p className="text-base md:text-2xl font-bold text-center text-[#142B2B]">
+              “Where Nature Meets <br />
+              Comfort.”
+            </p>
+          </div>
+
+          {/* Right Side */}
+          <div
+            className={`
+        ${CARD_WIDTH_CLASS}
+        bg-[#f7f3eb]
+        p-6 md:p-10
+        relative flex flex-col justify-center
+        mx-auto md:mx-0
+      `}
+          >
+            {/* Badge */}
+            <div className="absolute  top-6 right-6">
+              <img src={BlackLogo} alt="Badge" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+            </div>
+
+            {/* Heading */}
+            <h2 className={`${HEADING_SIZE_CLASS} text-center  mb-6`}>
+              Second Floor
+            </h2>
+
+            {/* Description */}
+            <p className={`${TEXT_SIZE_CLASS} text-center font-bold   leading-relaxed mb-8`}>
+              The private bedroom zone offers two<br />   elegant rooms with wide windows, smart
+              <br /> closets, and shared bathroom access. A <br />  spacious terrace at the rear provides a <br />
+              tranquil sit-out area, perfect for unwinding<br />  with forest views or hosting an intimate  <br />
+              <span className="block text-center">sunset tea.</span>
+            </p>
+
+            {/* Stats */}
+            <div className="space-y-2 text-center ">
+              <p className={`${TEXT_SIZE_CLASS} font-semibold`}>
+                <span className="font-bold">Covered Area:</span> 620.530 sft
+              </p>
+              <p className={`${TEXT_SIZE_CLASS} font-semibold`}>
+                <span className="font-bold">Total Covered Area:</span> 1,973.00 sft
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* 2BED-TYPE  Rooftop */}
+      <div className="w-full">
+        {/* Top Image */}
+        <div className="w-full overflow-hidden">
+          <img
+            src={type2}
+            alt="Top View"
+            className="w-full h-auto md:h-[108vh] object-contain"
+          />
+        </div>
+
+        {/* Bottom Section */}
+        <div className="flex md:justify-around flex-col md:flex-row bg-white">
+          {/* Left Side */}
+          <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col items-center">
+            <img
+              src={heroImage}
+              alt="Front View"
+              className="w-full h-auto rounded-md shadow-lg mb-4"
+            />
+            <p className="text-base md:text-2xl font-bold text-center text-[#142B2B]">
+              “Rooted in Nature, <br />
+              Crafted for You.”
+            </p>
+          </div>
+
+          {/* Right Side */}
+          <div
+            className={`
+        ${CARD_WIDTH_CLASS}
+        bg-[#f7f3eb]
+        p-6 md:p-10
+        relative flex flex-col justify-center
+        mx-auto md:mx-0
+      `}
+          >
+            {/* Badge */}
+            <div className="absolute  top-6 right-6">
+              <img src={BlackLogo} alt="Badge" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+            </div>
+
+            {/* Heading */}
+            <h2 className={`${HEADING_SIZE_CLASS} text-center  mb-6`}>
+              Rooftop
+            </h2>
+
+            {/* Description */}
+            <p className={`${TEXT_SIZE_CLASS} text-center font-bold   leading-relaxed mb-8`}>
+              A beautifully designed rooftop terrace <br />   crowns the Skyview Villa — complete with
+              <br /> pergola sitting and panoramic views of the <br />   Murree hills and pine canopy. The Mumty <br />
+               provides covered access, making this floor <br />  usable year-round as a retreat, barbecue <br />
+              <span className="block text-center"> space, or quiet lounge.</span>
+            </p>
+
+            {/* Stats */}
+            <div className="space-y-2 text-center ">
+              <p className={`${TEXT_SIZE_CLASS} font-semibold`}>
+                <span className="font-bold">Covered Area:</span> 112.056 sft
+              </p>
+              <p className={`${TEXT_SIZE_CLASS} font-semibold`}>
+                <span className="font-bold">Total Covered Area:</span> 1,973.00 sft
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-3xl mx-auto p-8 bg-white font-sans text-gray-900">
+
+
+        {/* payment plan */}
+      {/* Header */}
+      <div className="flex flex-col items-center mb-8">
+        <img src={Logo} alt="Barian Logo" className="h-16 mb-4" />
+        <h1 className="text-2xl font-bold">Barian Pine Lodges</h1>
+        <p className="mt-2 text-center">
+          <span className="font-semibold">24 MONTHS PAYMENT PLAN</span><br/>
+          <span className="text-sm">2 Bed Lodges (Hill & Valley View)</span>
+        </p>
+        <p className="mt-2 text-sm">
+          <span className="font-medium">Floor Type:</span> Ground Floor to Roof Top (Skyview)<br/>
+          <span className="font-medium">Covered Area:</span> 1,973 SFT
+        </p>
+      </div>
+
+      {/* Installment Table */}
+      <table className="w-full table-fixed border border-gray-300 mb-8">
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="p-2 border-r">24 MONTHS INSTALLMENT PLAN</th>
+            <th className="p-2 border-r">PKR Amount</th>
+            <th className="p-2">Payable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="odd:bg-white even:bg-gray-50">
+            <td className="p-2 border-t border-r">Booking (30%)</td>
+            <td className="p-2 border-t border-r">PKR 7,517,130/-</td>
+            <td className="p-2 border-t">At Time of Booking</td>
+          </tr>
+          <tr>
+            <td className="p-2 border-t border-r">Monthly Installments (24%)</td>
+            <td className="p-2 border-t border-r">PKR 2,281,711/-</td>
+            <td className="p-2 border-t">24 Installments</td>
+          </tr>
+          <tr>
+            <td className="p-2 border-t border-r">Quarterly Installments (26%)</td>
+            <td className="p-2 border-t border-r">PKR 2,834,646/-</td>
+            <td className="p-2 border-t">8 Installments</td>
+          </tr>
+          <tr>
+            <td className="p-2 border-t border-r">Possession (20%)</td>
+            <td className="p-2 border-t border-r">PKR 5,246,275/-</td>
+            <td className="p-2 border-t">On Final Handover</td>
+          </tr>
+          <tr className="font-bold bg-gray-100">
+            <td className="p-2 border-t border-r">TOTAL PRICE</td>
+            <td className="p-2 border-t border-r">PKR 25,050,000/-</td>
+            <td className="p-2 border-t"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      {/* Optional Net Cash Plan */}
+      <div className="mb-8">
+        <h2 className="font-semibold mb-2">Net Cash Payment Plan (Optional)</h2>
+        <ul className="list-disc list-inside text-sm">
+          <li>Total Price with 5% Discount.</li>
+          <li>Flexible payment terms available upon request.</li>
+          <li>Fast-track delivery available: Lodges can be handed over within 4 to 6 months, subject to availability and agreement.</li>
+        </ul>
+      </div>
+
+      {/* Footer Image */}
+      <div className="overflow-hidden rounded-lg shadow-lg">
+        <img src={LodgeImage} alt="Fully furnished lodge" className="w-full object-cover" />
+      </div>
     </div>
 
-    {/* Heading */}
-    <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
-      Ground Floor
-    </h2>
-
-    {/* Description */}
-    <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-8">
-      Welcoming As you enter directly from the road, the Ground Floor welcomes you with a secure double car garage, private entry lobby, storage, laundry zone, and a cozy rear-side terrace. This level offers a perfect mix of convenience and utility, ideal for both short stays and permanent living.
-    </p>
-
-    {/* Stats */}
-    <div className="space-y-2">
-      <p className="text-base md:text-lg font-semibold text-gray-800">
-        <span className="font-bold">Covered Area:</span> 620.530 sft
-      </p>
-      <p className="text-base md:text-lg font-semibold text-gray-800">
-        <span className="font-bold">Total Covered Area:</span> 1,973.00 sft
-      </p>
-    </div>
-  </div>
-</div>
 
 
-
-</div>
 
 
 
@@ -247,7 +516,7 @@ const MasterPlan = () => {
         </div>
       </div>
       {/* 3BED-TYPE 1 Section */}
-      <div className="bg-white h-full text-[#142B2B] text-center py-28">
+      {/* <div className="bg-white h-full text-[#142B2B] text-center py-28">
         <h2 className="text-5xl md:text-6xl font-bold">1 BED LODGES – SKYVIEW RESIDENCES</h2>
         <div className='w-full flex justify-around'>
           <div className="relative w-80 mt-2 border-t my-12 border-gray-500"></div>
@@ -264,41 +533,7 @@ const MasterPlan = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Penthouse Section */}
-      {/* <div className="bg-[#142B2B] h-full text-white text-center py-28">
-        <h2 className="text-5xl md:text-6xl font-bold">Pent House</h2>
-        <div className='w-full flex justify-around'>
-          <div className="relative w-80 mt-2 border-t my-12 border-gray-500"></div>
-        </div>
-        <div className="flex justify-around">
-          {SKYPLEX.map((PH, index) => (
-            <div key={index} className="text-center flex flex-col items-center space-y-16">
-              <div>
-                <h3 className="text-4xl font-bold">{PH.name}</h3>
-                <p className="text-3xl font-semibold">{PH.level}</p>
-              </div>
-              <p className="text-3xl font-semibold">{PH.size}</p>
-              <button className="mt-4 px-4 py-2 bg-[#142B2B] text-white rounded-full border-2 border-transparent hover:bg-white hover:text-black hover:border-[#142B2B]" onClick={() => openSlider(PH.images)}>ENTER</button>
-            </div>
-          ))}
-        </div>
       </div> */}
-
-      {/* Slider Modal */}
-      {selectedImages.length > 0 && (
-        <div className="fixed inset-0 bg-[#142B2B] bg-opacity-80 flex justify-center items-center z-50">
-          <div className="relative w-full max-w-7xl">
-            <button className="absolute top-4 right-4 text-white z-10 bg-red-500 hover:bg-white hover:text-red-600 px-4 py-2 rounded-full" onClick={closeSlider}>Close</button>
-            <div className="flex justify-center items-center h-[100vh] relative">
-              <button className="absolute left-4 text-white bg-gray-700 px-3 py-1 rounded-full hover:bg-gray-500" onClick={prevSlide}>◀</button>
-              <img src={selectedImages[currentIndex]} alt="Floor Plan" className="rounded-lg max-h-[80vh] w-auto" />
-              <button className="absolute right-4 text-white bg-gray-700 px-3 py-1 rounded-full hover:bg-gray-500" onClick={nextSlide}>▶</button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

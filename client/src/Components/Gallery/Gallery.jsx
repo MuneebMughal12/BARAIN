@@ -61,7 +61,7 @@ export default function Exterior() {
                     playsInline
                     className="w-full h-full rounded-lg object-fill"
                 >
-                    <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1751374888/extroribg_xj8qvg.mp4" type="video/mp4" />
+                    <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1752904263/Clip_10_hjml5u.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 {/* </div> */}
@@ -205,7 +205,7 @@ export default function Exterior() {
                             className="w-full  rounded-lg object-cover"
                         >
                             <source
-                                src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1751365897/bgvedio_matvfs.mp4"
+                                src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1752904274/Clip_12_1_jqyzgg.mp4"
                                 type="video/mp4"
                             />
                             Your browser does not support the video tag.
@@ -219,7 +219,7 @@ export default function Exterior() {
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                     <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                        Experience 3D Volar Vista 3Bed Type-2
+                        Experience 3D Volar Vista Bed 
                     </h2>
                     <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
