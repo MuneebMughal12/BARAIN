@@ -124,63 +124,58 @@ const MasterPlan = () => {
   {/* Top Image */}
 <div className="w-full">
   <img
-    src={type1} // 👈 Replace with your image variable/path
+    src={type1}
     alt="Top View"
-    className="w-full h-[108vh] object-contain"
-  />
+    className="w-full h-[108vh] object-contain"  />
 </div>
 
   {/* Bottom Section */}
  <div className="flex flex-col md:flex-row bg-white relative">
   {/* Left Side */}
-  <div className="md:w-1/2 w-full flex flex-col p-4">
+  <div className="md:w-1/2 w-full flex flex-col p-6 md:p-8">
     <img
-      src={heroImage} // 👈 Replace with your left image
+      src={heroImage} // 👈 Your left image
       alt="Front View"
-      className="w-full h-auto object-cover mb-4"
+      className="w-full h-auto rounded-md shadow-lg mb-4"
     />
-    <p className="italic text-xl font-semibold text-center">
+    <p className=" text-lg md:text-xl font-medium text-center text-gray-800">
       “Where the first impression lasts forever”
     </p>
   </div>
 
   {/* Right Side */}
-  <div className="md:w-1/2 w-full bg-[#f7f3eb] p-6 md:p-10 relative">
+  <div className="md:w-1/2 w-full bg-[#f7f3eb] p-6 md:p-10 relative flex flex-col justify-center">
     {/* Badge */}
-    <div className="absolute top-4 right-4">
+    <div className="absolute top-6 right-6">
       <img
-        src={BlackLogo} // 👈 Replace with your logo
+        src={BlackLogo} // 👈 Your badge/logo
         alt="Badge"
         className="w-16 h-16 object-contain"
       />
     </div>
 
     {/* Heading */}
-    <h2 className="text-3xl md:text-4xl font-bold mb-4">Ground Floor</h2>
+    <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
+      Ground Floor
+    </h2>
 
     {/* Description */}
-    <div className="">
-    <p className=" text-base md:text-lg leading-relaxed mb-6">
-      Welcoming As you enter directly from the road, the Ground Floor welcomes
-      you with a secure double car garage, private entry lobby, storage, laundry
-      zone, and a cozy rear-side terrace. This level offers a perfect mix of
-      convenience and utility, ideal for both short stays and permanent living.
+    <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-8">
+      Welcoming As you enter directly from the road, the Ground Floor welcomes you with a secure double car garage, private entry lobby, storage, laundry zone, and a cozy rear-side terrace. This level offers a perfect mix of convenience and utility, ideal for both short stays and permanent living.
     </p>
 
     {/* Stats */}
-    <div className="mt-6">
-      <p className="text-lg font-semibold mb-1">
+    <div className="space-y-2">
+      <p className="text-base md:text-lg font-semibold text-gray-800">
         <span className="font-bold">Covered Area:</span> 620.530 sft
       </p>
-      <p className="text-lg font-semibold">
+      <p className="text-base md:text-lg font-semibold text-gray-800">
         <span className="font-bold">Total Covered Area:</span> 1,973.00 sft
       </p>
-      </div>
     </div>
   </div>
-
-
 </div>
+
 
 
 </div>
