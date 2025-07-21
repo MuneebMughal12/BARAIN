@@ -148,7 +148,7 @@ const Forms = () => {
       <div className="w-full h-96 mt-8">
         <iframe
           className="w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1236.7846714231725!2d-0.2452746!3d5.6961493!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwNDEnNDUuOSJOIDDCsDE0JzQxLjIiVw!5e1!3m2!1sen!2s!4v1751292805711!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4124.0286187842685!2d73.3843954!3d33.952307299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfd74bff62556b%3A0x5e362534a98e4f4a!2sBarian%20Pine%20Lodges%20Murree!5e1!3m2!1sen!2s!4v1753107371738!5m2!1sen!2s"
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

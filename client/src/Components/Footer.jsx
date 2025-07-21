@@ -20,9 +20,9 @@ const Footer = () => {
             <p className="text-xl"><strong>EMAIL :</strong> <a href="mailto:geoconenterprises@outlook.com" className="underline">geoconenterprises@outlook.com</a></p>
 
             <p className="mt-2 text-xl"><strong>ADDRESS :</strong></p>
-            <p className="text-lg">Plot No.146 c, Street Sechni, Block 1, Parcel 146,</p>
-            <p className="text-lg">Shewn Edgeed Pink, North Airport Residential,</p>
-            <p className="text-lg">Region Greater Accra, Ghanna</p>
+            <p className="text-lg">X92M+VQV, Mohra Bhatian, Murree, 47150, Pakistan</p>
+            {/* <p className="text-lg">Shewn Edgeed Pink, North Airport Residential,</p> */}
+            {/* <p className="text-lg">Region Greater Accra, Ghanna</p> */}
 
             {/* <a href="/privacy-policy" className="underline mt-2 inline-block text-lg">Privacy policy</a> */}
           </div>

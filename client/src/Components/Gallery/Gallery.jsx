@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import volarimprison from "./volarimprison.webp"
-import logo from "./logo_12345-removebg-preview.webp"
+import logo from "./Logo.webp"
 import volarimprison1 from "./volarimprison1.webp"
 import volarimprison2 from "./volarimprison2.webp"
 import volarimprison3 from "./volarimprison3.webp"
@@ -59,7 +59,7 @@ export default function Exterior() {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full rounded-lg object-fill"
+                    className="w-full h-full rounded-lg object-cover"
                 >
                     <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1752904263/Clip_10_hjml5u.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -193,10 +193,10 @@ export default function Exterior() {
 
                 {/* Video Showcase Section */}
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                        Experience Valor Vista in Motion
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-[#c08d31] mb-10">
+                      EXPERIENCE 3D BARIAN  Motion
                     </h2>
-                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
                             autoPlay
                             loop
@@ -218,10 +218,8 @@ export default function Exterior() {
                 {/* Video 3bed type 2 Section */}
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                     <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                        Experience 3D Volar Vista Bed 
-                    </h2>
-                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+
+                    <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
                             autoPlay
                             loop
@@ -229,7 +227,7 @@ export default function Exterior() {
                             playsInline
                             className="w-full  rounded-lg object-cover"
                         >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1751367406/extriortype2_hxdjk8.mp4" type="video/mp4" />
+                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1752904184/Clip_3_ne0741.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
 
@@ -239,10 +237,8 @@ export default function Exterior() {
                 {/* Video 3bed type 1 Section */}
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                     <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                        Experience 3D Volar Vista 3Bed Type-1
-                    </h2>
-                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+
+                    <div className="relative w-[90%] max-w-7xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
                             autoPlay
                             loop
@@ -250,7 +246,7 @@ export default function Exterior() {
                             playsInline
                             className="w-full  rounded-lg object-cover"
                         >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1751367355/extriortype1_w759fv.mp4" type="video/mp4" />
+                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1752904258/Clip_4_sn3kg3.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
 

@@ -72,7 +72,7 @@ const MasterPlan = () => {
           <img
             src={Cloud}
             alt="Cloud"
-            className="hidden md:block absolute bottom-80 left-0 w-full h-full object-cover"
+            className="hidden md:block absolute bottom-72 left-0 w-full h-full object-cover"
           />
 
           {/* Overlay text: static on mobile, absolute on md+ */}
@@ -99,7 +99,7 @@ const MasterPlan = () => {
               above road level, each residence merges functional zoning with scenic luxury —
               offering residents space to breathe, relax, and reconnect with nature.
             </p>
-            <hr className="border-gray-300 my-6 w-1/2 mx-auto" />
+            <hr className="text-[#142B2B] my-6 w-1/2 mx-auto" />
             <p className="text-base md:text-xl font-semibold text-[#142B2B] max-w-xl mx-auto leading-relaxed pb-6">
               Crafted with precision and nestled in nature, Skyview Villas reflect the Barian
               Pine Lodges vision of "Elevated Living in Harmony with Nature." These homes are
@@ -376,80 +376,98 @@ const MasterPlan = () => {
           </div>
         </div>
       </div>
-        {/* payment plan */}
+      {/* payment plan */}
 
 
-       <div className="max-w-3xl mx-auto bg-white p-8 font-sans text-gray-900 shadow-lg">
-      {/* Birds at top */}
-      <div className="flex justify-start mb-4">
-        <img src={Birds} alt="Flying birds" className="h-8" />
-      </div>
+     <div className="w-full min-h-screen bg-white p-8 font-sans text-gray-900">
+        {/* Birds at top */}
+        {/* <div className="flex justify-start mb-4">
+          <img src={Birds} alt="Flying birds" className="h-80" />
+        </div> */}
 
-      {/* Header */}
-      <div className="flex flex-col items-center mb-8">
-        <img src={Logo} alt="Barian Logo" className="h-20 mb-4" />
-        <h1 className="text-3xl font-bold mb-1">Barian Pine Lodges</h1>
-        <p className="text-lg font-semibold">24 MONTHS PAYMENT PLAN</p>
-        <p className="text-sm text-gray-700 mt-1">2 Bed Lodges (Hill &amp; Valley View)</p>
-        <div className="text-sm text-gray-700 mt-2">
-          <span className="font-medium">Floor Type:</span> Ground Floor to Roof Top (Skyview)<br/>
-          <span className="font-medium ">Covered Area:</span> 1,973 SFT
+        {/* Header */}
+       <div className="flex flex-col items-center mb-8">
+          <img src={Logo} alt="Barian Logo" className="h-20 mb-4" />
+          <h1 className="text-3xl font-bold mb-1">Barian Pine Lodges</h1>
+          <p className="text-lg font-semibold">24 MONTHS PAYMENT PLAN</p>
+          <p className="text-sm text-[#142B2B]mt-1">2 Bed Lodges (Hill &amp; Valley View)</p>
+          <div className="text-sm text-[#142B2B]mt-2">
+            <span className="font-medium">Floor Type:</span> Ground Floor to Roof Top (Skyview)<br />
+            <span className="font-medium ">Covered Area:</span> 1,973 SFT
+          </div>
+        </div>
+
+        {/* Installment Table */}
+          <div className="overflow-x-auto mb-8">
+        <table className="w-full table-fixed border text-[#142B2B]">
+          <thead className="text-[#142B2B]">
+            <tr>
+              {/* <th className="p-3 border-r text-left text-sm"></th> */}
+              <th className="w-1/2 bg-[#e4ddca]  p-3 border-r text-center text-sm">24 MONTHS INSTALLMENT PLAN</th>
+              {/* <th className="p-3 text-left text-sm"></th> */}
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["Booking (30%)", "PKR 7,517,130/-", "At time of booking"],
+              ["Monthly Installments (24%)", "PKR 2,281,711/-", "24 installments"],
+              ["Quarterly Installments (26%)", "PKR 2,834,646/-", "8 installments"],
+              ["Possession (20%)", "PKR 5,246,275/-", "On final handover"]
+            ].map((row, i) => (
+              <tr key={i} className={i % 2 === 0 ? "bg-white" : "text-[#142B2B]"}>
+                <td className="p-3 border-t border-r text-sm">{row[0]}</td>
+                <td className="p-3 border-t border-r text-sm">{row[1]}</td>
+                <td className="p-3 border-t text-sm">{row[2]}</td>
+              </tr>
+            ))}
+            <tr className="text-[#142B2B] font-bold">
+              <td className="p-3 border-t"></td>
+              <td className="p-3 border-t border-r text-sm">TOTAL PRICE</td>
+              <td className="p-3 border-t border-r text-sm">PKR 25,050,000/-</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        {/* Net Cash Plan */}
+          <div className="mb-8 text-sm">
+          <h2 className="font-semibold mb-2">Net Cash Payment Plan (Optional)</h2>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Total price with 5% discount.</li>
+            <li>Flexible payment terms available upon request.</li>
+            <li>
+              Fast‐track delivery available: Lodges can be handed over within{" "}
+              <span className="font-semibold">4 to 6 months</span>, subject to
+              availability and agreement.
+            </li>
+          </ul>
+        </div>
+
+        {/* Footer Image */}
+       <div className="w-full flex flex-col md:flex-row items-center bg-white overflow-hidden">
+          {/* Text Column */}
+             <div className="w-full md:w-1/2  bg-opacity-60 p-8 md:p-16">
+            <h3 className="text-2xl text-center md:text-3xl font-semibold text-gray-900 mb-4">
+              Fully Furnished, Move-In Ready Lodges
+            </h3>
+            <p className="text-base text-center md:text-lg text-[#142B2B]leading-relaxed">
+              Each lodge is delivered fully furnished, designed <br /> to offer a complete turnkey lifestyle.
+              From elegant <br /> interiors and premium furniture to fully fixed <br /> kitchens and modern appliances,
+              every unit is <br /> thoughtfully curated to provide the comfort, <br /> convenience, and luxury of a private
+              mountain <br /> retreat — right from day one.
+            </p>
+          </div>
+
+          {/* Image Column */}
+          <div className="w-full md:w-1/2 h-auto">
+            <img
+              src={LodgeImage}
+              alt="Fully furnished lodge"
+             className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
-
-      {/* Installment Table */}
-      <table className="w-full table-fixed border border-gray-300 mb-8">
-        <thead className="bg-gray-100">
-          <tr>
-            <th className="w-1/2 p-3 border-r text-left text-sm">24 MONTHS INSTALLMENT PLAN</th>
-            <th className="p-3 border-r text-left text-sm">PKR Amount</th>
-            <th className="p-3 text-left text-sm">Payable</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ["Booking (30%)", "PKR 7,517,130/-", "At time of booking"],
-            ["Monthly Installments (24%)", "PKR 2,281,711/-", "24 installments"],
-            ["Quarterly Installments (26%)", "PKR 2,834,646/-", "8 installments"],
-            ["Possession (20%)", "PKR 5,246,275/-", "On final handover"]
-          ].map((row, i) => (
-            <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-              <td className="p-3 border-t border-r text-sm">{row[0]}</td>
-              <td className="p-3 border-t border-r text-sm">{row[1]}</td>
-              <td className="p-3 border-t text-sm">{row[2]}</td>
-            </tr>
-          ))}
-          <tr className="bg-gray-100 font-bold">
-            <td className="p-3 border-t border-r text-sm">TOTAL PRICE</td>
-            <td className="p-3 border-t border-r text-sm">PKR 25,050,000/-</td>
-            <td className="p-3 border-t"></td>
-          </tr>
-        </tbody>
-      </table>
-
-      {/* Net Cash Plan */}
-      <div className="mb-8 text-sm">
-        <h2 className="font-semibold mb-2">Net Cash Payment Plan (Optional)</h2>
-        <ul className="list-disc list-inside space-y-1">
-          <li>Total price with 5% discount.</li>
-          <li>Flexible payment terms available upon request.</li>
-          <li>
-            Fast‐track delivery available: Lodges can be handed over within{" "}
-            <span className="font-semibold">4 to 6 months</span>, subject to
-            availability and agreement.
-          </li>
-        </ul>
-      </div>
-
-      {/* Footer Image */}
-      <div className="overflow-hidden rounded-lg shadow-md">
-        <img
-          src={LodgeImage}
-          alt="Fully furnished lodge"
-          className="w-full h-64 object-cover"
-        />
-      </div>
-    </div>
 
 
 
@@ -520,25 +538,9 @@ const MasterPlan = () => {
           </div>
         </div>
       </div>
-      {/* 3BED-TYPE 1 Section */}
-      {/* <div className="bg-white h-full text-[#142B2B] text-center py-28">
-        <h2 className="text-5xl md:text-6xl font-bold">1 BED LODGES – SKYVIEW RESIDENCES</h2>
-        <div className='w-full flex justify-around'>
-          <div className="relative w-80 mt-2 border-t my-12 border-gray-500"></div>
-        </div>
-        <div className="flex justify-around">
-          {threeBKH.map((BKH, index) => (
-            <div key={index} className="text-center flex flex-col items-center space-y-16">
-              <div>
-                <h3 className="text-4xl font-bold">{BKH.name}</h3>
-                <p className="text-3xl font-semibold">{BKH.level}</p>
-              </div>
-              <p className="text-3xl font-semibold">{BKH.size}</p>
-              <button className="mt-4 px-4 py-2 bg-[#142B2B] text-white rounded-full border-2 border-transparent hover:bg-white hover:text-black hover:border-[#142B2B]" onClick={() => openSlider(BKH.images)}>ENTER</button>
-            </div>
-          ))}
-        </div>
-      </div> */}
+
+
+
     </div>
   );
 };

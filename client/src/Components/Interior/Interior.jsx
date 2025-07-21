@@ -3,18 +3,19 @@ import bedroomImg from "./bed1.webp";
 import bathroomImg from "./bath1.webp";
 import bed2 from "./bed2.webp";
 import bath2 from "./bath2.webp";
-import logo from "./logo_12345-removebg-preview.webp";
+import logo from "./Logo.webp";
 import bginterior from "./D5_Image 7_20230505_074849.webp";
 import { motion } from "framer-motion";
 
 const Interior = () => {
     return (
-        <div>
+        <div   style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}
+        >
 
                   {/* Background Section */}
       <div className="relative w-full h-[64vh] overflow-hidden"
       style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
-        <img src={bginterior} alt="Units Background" className="absolute top-0 left-0 w-full h-full " />
+        <img src={bginterior} alt="Units Background" className="absolute object-cover top-0 left-0 w-full h-full " />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
@@ -110,9 +111,10 @@ const Interior = () => {
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                     
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       Experience 3D BARIAN Bed 
+                       {/* Experience 3D BARIAN Bed  */}
+                       EXPERIENCE 3D BARIAN MASTER BED
                     </h2>
-                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
                             autoPlay
                             loop
@@ -129,9 +131,9 @@ const Interior = () => {
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                     
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       Experience 3D BARIAN Bed 2 
+                       EXPERIENCE 3D BARIAN BED
                     </h2>
-                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
                             autoPlay
                             loop
@@ -149,9 +151,9 @@ const Interior = () => {
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                      <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       Experience 3D BARIAN Bath
+                       EXPERIENCE 3D BARIAN MASTER BATH
                     </h2>
-                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
                             autoPlay
                             loop
@@ -169,9 +171,9 @@ const Interior = () => {
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                      <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       Experience 3D BARIAN Kitchen
+                      EXPERIENCE 3D BARIAN MASTER KITCHEN
                     </h2>
-                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
                             autoPlay
                             loop
@@ -189,7 +191,7 @@ const Interior = () => {
                 <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
                      <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
                     <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       Experience 3D BARIAN Tv lounge
+                       EXPERIENCE 3D BARIAN TV LOUNGE
                     </h2>
                     <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
