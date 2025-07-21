@@ -11,6 +11,7 @@ import LodgeImage from "./38.webp";
 import modern1 from "./38.webp"
 import modern2 from "./114.webp"
 import BlackLogo from "./BlackLogo.png"
+import Birds from "./birds.jfif";
 
 // 1kbh
 
@@ -18,6 +19,7 @@ import type1 from "./one/3type1.jpeg"
 import type2 from "./one/3type2.jpeg"
 import type3 from "./one/3type3.jpeg"
 import type4 from "./one/type3.jpeg"
+
 // 2kbh
 // import bedtype2 from "./three/bedtype2.jpeg"
 // import bedtype3 from "./three/bedtype3.jpeg";
@@ -302,7 +304,7 @@ const MasterPlan = () => {
                 <span className="font-bold">Covered Area:</span> 620.530 sft
               </p>
               <p className={`${TEXT_SIZE_CLASS} font-semibold`}>
-                <span className="font-bold">Total Covered Area:</span> 1,973.00 sft
+                <span className="font-bold  ">Total Covered Area:</span> 1,973.00 sft
               </p>
             </div>
           </div>
@@ -313,7 +315,7 @@ const MasterPlan = () => {
         {/* Top Image */}
         <div className="w-full overflow-hidden">
           <img
-            src={type2}
+            src={type4}
             alt="Top View"
             className="w-full h-auto md:h-[108vh] object-contain"
           />
@@ -358,7 +360,7 @@ const MasterPlan = () => {
             <p className={`${TEXT_SIZE_CLASS} text-center font-bold   leading-relaxed mb-8`}>
               A beautifully designed rooftop terrace <br />   crowns the Skyview Villa — complete with
               <br /> pergola sitting and panoramic views of the <br />   Murree hills and pine canopy. The Mumty <br />
-               provides covered access, making this floor <br />  usable year-round as a retreat, barbecue <br />
+              provides covered access, making this floor <br />  usable year-round as a retreat, barbecue <br />
               <span className="block text-center"> space, or quiet lounge.</span>
             </p>
 
@@ -374,75 +376,78 @@ const MasterPlan = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-3xl mx-auto p-8 bg-white font-sans text-gray-900">
-
-
         {/* payment plan */}
+
+
+       <div className="max-w-3xl mx-auto bg-white p-8 font-sans text-gray-900 shadow-lg">
+      {/* Birds at top */}
+      <div className="flex justify-start mb-4">
+        <img src={Birds} alt="Flying birds" className="h-8" />
+      </div>
+
       {/* Header */}
       <div className="flex flex-col items-center mb-8">
-        <img src={Logo} alt="Barian Logo" className="h-16 mb-4" />
-        <h1 className="text-2xl font-bold">Barian Pine Lodges</h1>
-        <p className="mt-2 text-center">
-          <span className="font-semibold">24 MONTHS PAYMENT PLAN</span><br/>
-          <span className="text-sm">2 Bed Lodges (Hill & Valley View)</span>
-        </p>
-        <p className="mt-2 text-sm">
+        <img src={Logo} alt="Barian Logo" className="h-20 mb-4" />
+        <h1 className="text-3xl font-bold mb-1">Barian Pine Lodges</h1>
+        <p className="text-lg font-semibold">24 MONTHS PAYMENT PLAN</p>
+        <p className="text-sm text-gray-700 mt-1">2 Bed Lodges (Hill &amp; Valley View)</p>
+        <div className="text-sm text-gray-700 mt-2">
           <span className="font-medium">Floor Type:</span> Ground Floor to Roof Top (Skyview)<br/>
-          <span className="font-medium">Covered Area:</span> 1,973 SFT
-        </p>
+          <span className="font-medium ">Covered Area:</span> 1,973 SFT
+        </div>
       </div>
 
       {/* Installment Table */}
       <table className="w-full table-fixed border border-gray-300 mb-8">
         <thead className="bg-gray-100">
           <tr>
-            <th className="p-2 border-r">24 MONTHS INSTALLMENT PLAN</th>
-            <th className="p-2 border-r">PKR Amount</th>
-            <th className="p-2">Payable</th>
+            <th className="w-1/2 p-3 border-r text-left text-sm">24 MONTHS INSTALLMENT PLAN</th>
+            <th className="p-3 border-r text-left text-sm">PKR Amount</th>
+            <th className="p-3 text-left text-sm">Payable</th>
           </tr>
         </thead>
         <tbody>
-          <tr className="odd:bg-white even:bg-gray-50">
-            <td className="p-2 border-t border-r">Booking (30%)</td>
-            <td className="p-2 border-t border-r">PKR 7,517,130/-</td>
-            <td className="p-2 border-t">At Time of Booking</td>
-          </tr>
-          <tr>
-            <td className="p-2 border-t border-r">Monthly Installments (24%)</td>
-            <td className="p-2 border-t border-r">PKR 2,281,711/-</td>
-            <td className="p-2 border-t">24 Installments</td>
-          </tr>
-          <tr>
-            <td className="p-2 border-t border-r">Quarterly Installments (26%)</td>
-            <td className="p-2 border-t border-r">PKR 2,834,646/-</td>
-            <td className="p-2 border-t">8 Installments</td>
-          </tr>
-          <tr>
-            <td className="p-2 border-t border-r">Possession (20%)</td>
-            <td className="p-2 border-t border-r">PKR 5,246,275/-</td>
-            <td className="p-2 border-t">On Final Handover</td>
-          </tr>
-          <tr className="font-bold bg-gray-100">
-            <td className="p-2 border-t border-r">TOTAL PRICE</td>
-            <td className="p-2 border-t border-r">PKR 25,050,000/-</td>
-            <td className="p-2 border-t"></td>
+          {[
+            ["Booking (30%)", "PKR 7,517,130/-", "At time of booking"],
+            ["Monthly Installments (24%)", "PKR 2,281,711/-", "24 installments"],
+            ["Quarterly Installments (26%)", "PKR 2,834,646/-", "8 installments"],
+            ["Possession (20%)", "PKR 5,246,275/-", "On final handover"]
+          ].map((row, i) => (
+            <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+              <td className="p-3 border-t border-r text-sm">{row[0]}</td>
+              <td className="p-3 border-t border-r text-sm">{row[1]}</td>
+              <td className="p-3 border-t text-sm">{row[2]}</td>
+            </tr>
+          ))}
+          <tr className="bg-gray-100 font-bold">
+            <td className="p-3 border-t border-r text-sm">TOTAL PRICE</td>
+            <td className="p-3 border-t border-r text-sm">PKR 25,050,000/-</td>
+            <td className="p-3 border-t"></td>
           </tr>
         </tbody>
       </table>
 
-      {/* Optional Net Cash Plan */}
-      <div className="mb-8">
+      {/* Net Cash Plan */}
+      <div className="mb-8 text-sm">
         <h2 className="font-semibold mb-2">Net Cash Payment Plan (Optional)</h2>
-        <ul className="list-disc list-inside text-sm">
-          <li>Total Price with 5% Discount.</li>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Total price with 5% discount.</li>
           <li>Flexible payment terms available upon request.</li>
-          <li>Fast-track delivery available: Lodges can be handed over within 4 to 6 months, subject to availability and agreement.</li>
+          <li>
+            Fast‐track delivery available: Lodges can be handed over within{" "}
+            <span className="font-semibold">4 to 6 months</span>, subject to
+            availability and agreement.
+          </li>
         </ul>
       </div>
 
       {/* Footer Image */}
-      <div className="overflow-hidden rounded-lg shadow-lg">
-        <img src={LodgeImage} alt="Fully furnished lodge" className="w-full object-cover" />
+      <div className="overflow-hidden rounded-lg shadow-md">
+        <img
+          src={LodgeImage}
+          alt="Fully furnished lodge"
+          className="w-full h-64 object-cover"
+        />
       </div>
     </div>
 
