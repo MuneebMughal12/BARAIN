@@ -20,7 +20,7 @@ const Footer = () => {
             <p className="text-xl"><strong>EMAIL :</strong> <a href="mailto:geoconenterprises@outlook.com" className="underline">geoconenterprises@outlook.com</a></p>
 
             <p className="mt-2 text-xl"><strong>ADDRESS :</strong></p>
-            <p className="text-lg">X92M+VQV, Mohra Bhatian, Murree, 47150, Pakistan</p>
+            <p className="text-lg">Mohra Bhatian, Murree, 47150, Pakistan</p>
             {/* <p className="text-lg">Shewn Edgeed Pink, North Airport Residential,</p> */}
             {/* <p className="text-lg">Region Greater Accra, Ghanna</p> */}
 

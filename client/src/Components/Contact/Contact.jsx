@@ -84,8 +84,7 @@ const Forms = () => {
           >
           <h2 className="text-[1.7rem] font-semibold mb-4">Contact Information</h2>
           <p className="mb-2 text-2xl font-bold">Address:</p>
-          <p className="text-lg">Plot No.9587, Block No.14, Section No.180, Kwabenya, District 006,
-            Greater Accra,Ghana.</p>
+          <p className="text-lg"> Mohra Bhatian, Murree, 47150, Pakistan</p>
 
           <p className="mt-4 text-2xl font-bold">Phone/WhatsApp:</p>
           <p className="text-lg">+92-333-3404585 <br />
