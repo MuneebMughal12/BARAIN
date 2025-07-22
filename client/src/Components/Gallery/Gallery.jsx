@@ -20,9 +20,7 @@ import ImageGallery8 from "./48.webp"
 import ImageGallery9 from "./5.webp"
 import ImageGallery10 from "./50.webp"
 import ImageGallery11 from "./54.webp"
-// import ImageGallery12 from "./61.webp"
-// import ImageGallery13 from "./79.webp"
-// import ImageGallery14 from "./9.webp"
+
 
 const images = [ImageGallery1, ImageGallery2, ImageGallery3, ImageGallery4, ImageGallery5, ImageGallery6, ImageGallery7, ImageGallery8, ImageGallery9, ImageGallery10, ImageGallery11,];
 
@@ -48,6 +46,32 @@ export default function Exterior() {
 
         return () => clearInterval(interval); // Cleanup on unmount
     }, [images.length]);
+
+
+    const fadeUp = {
+        hidden: { opacity: 0, y: 40 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" },
+        },
+    };
+    const fadeLeft = {
+        hidden: { opacity: 0, x: -40 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { duration: 0.6, ease: "easeOut" },
+        },
+    };
+    const fadeRight = {
+        hidden: { opacity: 0, x: 40 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { duration: 0.6, ease: "easeOut" },
+        },
+    };
 
     return (
         <div>
@@ -78,36 +102,53 @@ export default function Exterior() {
             </div>
             {/* Extrior 1 image and name  */}
             <div className="bg-[#142B2B] text-white font-sans min-h-screen py-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:px-16 py-8">
-                    <div className="w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:px-16 py-8"
+                >
+                    <motion.div className="w-full"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={fadeLeft}>
                         <img src={volarimprison1} alt="Valor Vista Entrance" className="w-full rounded-lg shadow-xl" />
-                    </div>
-                    <div className="flex flex-col justify-center items-start space-y-6 p-4 md:p-8">
+                    </motion.div>
+                    <motion.div className="flex flex-col justify-center items-start space-y-6 p-4 md:p-8"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={fadeRight}>
                         <img src={logo} alt="Valor Vista Logo" className="h-80 w-80 object-contain" />
                         <p className="text-[#c08d31] text-4xl font-medium">"WHERE FIRST  <br />    IMPRESSIONS LAST  <br />   FOREVER"</p>
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className="px-6 md:px-16 py-12 bg-[#1f4141] rounded-lg shadow-lg">
                     <div className="flex flex-col md:flex-row items-center gap-10">
 
                         {/* Left Image (replacing text) */}
-                        <div className="md:w-1/2">
+                        <motion.div className="md:w-1/2" initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={fadeUp}
+                        >
                             <img
                                 src={volarimprison3}
                                 alt="Valor Vista Side A"
                                 className=" inset-0 w-full h-full object-cover blur-0 opacity-50 rounded-lg shadow-lg"
                             />
-                        </div>
+                        </motion.div>
 
                         {/* Right Image */}
-                        <div className="md:w-1/2">
+                        <motion.div className="md:w-1/2"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={fadeUp}>
                             <img
                                 src={volarimprison}
                                 alt="Valor Vista Side B"
                                 className="w-full rounded-lg shadow-lg"
                             />
-                        </div>
+                        </motion.div>
 
                     </div>
                 </div>
@@ -116,37 +157,53 @@ export default function Exterior() {
             {/* Extrior 2 image and name  */}
             <div className="bg-[#142B2B] text-white font-sans min-h-screen py-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 md:px-16 py-8">
-                    <div className="w-full">
+                    <motion.div className="w-full"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={fadeLeft}>
                         <img src={volarimprison2} alt="Valor Vista Entrance" className="w-full rounded-lg shadow-xl" />
-                    </div>
-                    <div className="flex flex-col justify-center items-start space-y-6 p-4 md:p-8">
+                    </motion.div>
+                    <motion.div className="flex flex-col justify-center items-start space-y-6 p-4 md:p-8"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={fadeRight}>
                         <img src={logo} alt="Valor Vista Logo" className="h-80 w-80 object-contain" />
                         <p className="text-[#c08d31] text-4xl font-medium">"WHERE FIRST <br />
                             IMPRESSIONS LAST <br />
                             FOREVER"</p>
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className="px-6 md:px-16 py-12 bg-[#1f4141] rounded-lg shadow-lg">
                     <div className="flex flex-col md:flex-row items-center gap-10">
 
                         {/* Left Image (replacing text) */}
-                        <div className="md:w-1/2">
+                        <motion.div className="md:w-1/2"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={fadeUp}>
                             <img
                                 src={volarimprison5}
                                 alt="Valor Vista Side A"
                                 className=" inset-0 w-full h-full object-cover blur-0 opacity-50 rounded-lg shadow-lg"
                             />
-                        </div>
+                        </motion.div>
 
                         {/* Right Image */}
-                        <div className="md:w-1/2">
+                        <motion.div className="md:w-1/2"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={fadeUp}>
                             <img
                                 src={volarimprison4}
                                 alt="Valor Vista Side B"
                                 className="w-full rounded-lg shadow-lg"
                             />
-                        </div>
+                        </motion.div>
 
                     </div>
                 </div>
@@ -192,9 +249,13 @@ export default function Exterior() {
                 <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
 
                 {/* Video Showcase Section */}
-                <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
+                <motion.div className="bg-[#1f4141] py-20 text-center text-white font-montserrat"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-[#c08d31] mb-10">
-                      EXPERIENCE 3D BARIAN  Motion
+                        EXPERIENCE 3D BARIAN  Motion
                     </h2>
                     <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
                         <video
@@ -211,12 +272,16 @@ export default function Exterior() {
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                </div>
+                </motion.div>
 
 
 
                 {/* Video 3bed type 2 Section */}
-                <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
+                <motion.div className="bg-[#1f4141] py-20 text-center text-white font-montserrat"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}>
                     <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
 
                     <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
@@ -232,10 +297,14 @@ export default function Exterior() {
                         </video>
 
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Video 3bed type 1 Section */}
-                <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
+                <motion.div className="bg-[#1f4141] py-20 text-center text-white font-montserrat"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}>
                     <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
 
                     <div className="relative w-[90%] max-w-7xl mx-auto rounded-lg overflow-hidden shadow-2xl">
@@ -251,7 +320,7 @@ export default function Exterior() {
                         </video>
 
                     </div>
-                </div>
+                </motion.div>
 
             </div>
 

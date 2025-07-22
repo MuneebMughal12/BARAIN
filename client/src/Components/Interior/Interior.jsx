@@ -7,53 +7,92 @@ import logo from "./Logo.webp";
 import bginterior from "./D5_Image 7_20230505_074849.webp";
 import { motion } from "framer-motion";
 
+const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.6, ease: "easeOut" },
+    },
+};
+const fadeLeft = {
+    hidden: { opacity: 0, x: -40 },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: { duration: 0.6, ease: "easeOut" },
+    },
+};
+const fadeRight = {
+    hidden: { opacity: 0, x: 40 },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: { duration: 0.6, ease: "easeOut" },
+    },
+};
+
 const Interior = () => {
     return (
-        <div   style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}
+        <div style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}
         >
 
-                  {/* Background Section */}
-      <div className="relative w-full h-[64vh] overflow-hidden"
-      style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
-        <img src={bginterior} alt="Units Background" className="absolute object-cover top-0 left-0 w-full h-full " />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-6xl font-bold"
-          >
-            Interior
-          </motion.h1>
-        </div>
-      </div>
+            {/* Background Section */}
+            <div className="relative w-full h-[64vh] overflow-hidden"
+                style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
+                <img src={bginterior} alt="Units Background" className="absolute object-cover top-0 left-0 w-full h-full " />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
+                    <motion.h1
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                        className="text-6xl font-bold"
+                    >
+                        Interior
+                    </motion.h1>
+                </div>
+            </div>
 
-            <div className=" text-black py-12 "
-                style={{ fontFamily: 'Montserrat', textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
+            <motion.div className=" text-black py-12 "
+
+                style={{ fontFamily: 'Montserrat', textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={fadeUp}>
                 <div className="text-center text-[#c08d31] text-3xl sm:text-4xl md:text-5xl font-semibold tracking-widest pb-10">
                     A LOVE STORY THAT NEVER ENDS
                     <div className="w-24 h-[1px] bg-[#c08d31] mx-auto mt-2"></div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 md:px-20">
-                    <div className="col-span-2">
+                    <motion.div className="col-span-2"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={fadeLeft}>
                         <img
                             src={bedroomImg}
                             alt="Master Bedroom"
                             className="w-full h-auto rounded shadow-lg"
                         />
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={fadeRight}>
                         <img
                             src={bathroomImg}
                             alt="Luxury Bathroom"
                             className="w-full h-[70vh] rounded shadow-lg"
                         />
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 md:px-20 mt-12 items-end">
-                    <div className="hidden md:block">
+                    <div className="hidden md:block"
+                    >
                         <img src={logo} alt="Valor Vista Logo" className="h-32 w-auto" />
                     </div>
                     <div className="md:col-span-2">
@@ -66,7 +105,7 @@ const Interior = () => {
                 </div>
 
                 <div className="mt-10 border-t border-[#c08d31] w-[90%] mx-auto" />
-            </div>
+            </motion.div>
             <div className="bg-[#1f4141] text-black py-12 "
                 style={{ fontFamily: 'Montserrat', textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
                 <div className="text-center text-[#c08d31] text-3xl sm:text-4xl md:text-5xl font-semibold tracking-widest pb-10">
@@ -75,20 +114,28 @@ const Interior = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 md:px-20">
-                    <div className="col-span-2">
+                    <motion.div className="col-span-2"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={fadeLeft}>
                         <img
                             src={bed2}
                             alt="Master Bedroom"
                             className="w-full h-auto rounded shadow-lg"
                         />
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={fadeRight}>
                         <img
                             src={bath2}
                             alt="Luxury Bathroom"
                             className="w-full h-[70vh] rounded shadow-lg"
                         />
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 md:px-20 mt-12 items-end">
@@ -107,106 +154,126 @@ const Interior = () => {
                 <div className="mt-10 border-t border-[#c08d31] w-[90%] mx-auto" />
             </div>
 
-                 {/* Video BEDS Section */}
-                <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
-                    
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       {/* Experience 3D BARIAN Bed  */}
-                       EXPERIENCE 3D BARIAN MASTER BED
-                    </h2>
-                    <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full  rounded-lg object-cover"
-                        >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753092199/Bed_Interior_1.1_fgd9tb.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+            {/* Video BEDS Section */}
+            <motion.div className="bg-[#1f4141] py-20 text-center text-white font-montserrat"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={fadeUp}>
 
-                    </div>
-                </div>
-                <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
-                    
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       EXPERIENCE 3D BARIAN BED
-                    </h2>
-                    <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full  rounded-lg object-cover"
-                        >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753092207/Bed_Interior_2.2_fyavaf.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
+                    {/* Experience 3D BARIAN Bed  */}
+                    EXPERIENCE 3D BARIAN MASTER BED
+                </h2>
+                <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full  rounded-lg object-cover"
+                    >
+                        <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753092199/Bed_Interior_1.1_fgd9tb.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
 
-                    </div>
                 </div>
-                 {/* Video Bath Section */}
-                <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
-                     <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       EXPERIENCE 3D BARIAN MASTER BATH
-                    </h2>
-                    <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full  rounded-lg object-cover"
-                        >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753092199/Bath_Interior_2.3_rnvs0y.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+            </motion.div>
+            <motion.div className="bg-[#1f4141] py-20 text-center text-white font-montserrat"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={fadeUp}>
 
-                    </div>
-                </div>
-                 {/* Video Kitchen Section */}
-                <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
-                     <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                      EXPERIENCE 3D BARIAN MASTER KITCHEN
-                    </h2>
-                    <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full  rounded-lg object-cover"
-                        >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753093019/Kitchen_2_mqbwat.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
+                    EXPERIENCE 3D BARIAN BED
+                </h2>
+                <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full  rounded-lg object-cover"
+                    >
+                        <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753092207/Bed_Interior_2.2_fyavaf.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
 
-                    </div>
                 </div>
-                 {/* Video Tv lounge Section */}
-                <div className="bg-[#1f4141] py-20 text-center text-white font-montserrat">
-                     <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
-                       EXPERIENCE 3D BARIAN TV LOUNGE
-                    </h2>
-                    <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full  rounded-lg object-cover"
-                        >
-                            <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753093024/Loungh_2_c98pty.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+            </motion.div>
+            {/* Video Bath Section */}
+            <motion.div className="bg-[#1f4141] py-20 text-center text-white font-montserrat"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={fadeUp}>
+                <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
+                <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
+                    EXPERIENCE 3D BARIAN MASTER BATH
+                </h2>
+                <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full  rounded-lg object-cover"
+                    >
+                        <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753092199/Bath_Interior_2.3_rnvs0y.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
 
-                    </div>
                 </div>
+            </motion.div>
+            {/* Video Kitchen Section */}
+            <motion.div className="bg-[#1f4141] py-20 text-center text-white font-montserrat"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={fadeUp}>
+                <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
+                <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
+                    EXPERIENCE 3D BARIAN MASTER KITCHEN
+                </h2>
+                <div className="relative w-[90%] max-w-7xl  mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full  rounded-lg object-cover"
+                    >
+                        <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753093019/Kitchen_2_mqbwat.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+
+                </div>
+            </motion.div>
+            {/* Video Tv lounge Section */}
+            <motion.div className="bg-[#1f4141] py-20 text-center text-white font-montserrat"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={fadeUp}>
+                <div className="mt-10 mb-10 border-t border-[#c08d31] w-[90%] mx-auto" />
+                <h2 className="text-4xl md:text-5xl font-bold text-[#c08d31] mb-10">
+                    EXPERIENCE 3D BARIAN TV LOUNGE
+                </h2>
+                <div className="relative w-[90%] max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full  rounded-lg object-cover"
+                    >
+                        <source src="https://res.cloudinary.com/dz4eexjrs/video/upload/v1753093024/Loungh_2_c98pty.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+
+                </div>
+            </motion.div>
         </div>
     );
 };

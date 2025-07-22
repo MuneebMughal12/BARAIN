@@ -1,10 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "tailwindcss/tailwind.css";
-import whyvolarvista from "./aboutusbg.webp";
 import hEROBG from "./hEROBG.webp";
 import mission from "./106.webp";
-import company from "./geo-group-768x157.png";
+import company from "./logo.png";
 import Logo from "./Logo.webp";
 
 const fadeUp = {
@@ -171,7 +170,7 @@ const About = () => {
         {/* Company Text */}
         <motion.div variants={fadeUp} className="lg:w-1/2 space-y-4">
           <div className="flex justify-center">
-            <div className="w-52 h-52 sm:w-64 sm:h-64 bg-gray-900">
+            <div className="w-52 h-52 sm:w-64 sm:h-64">
               <img src={company} alt="GeoCon Enterprises" className="w-full h-full object-contain" />
             </div>
           </div>

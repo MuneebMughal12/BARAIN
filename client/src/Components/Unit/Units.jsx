@@ -15,7 +15,8 @@ import rooftop from "./rooftop.webp";
 // import modern2 from "./114.webp"
 import Ground from "./Ground.webp"
 import BlackLogo from "./BlackLogo.png"
-// import Birds from "./birds.jfif";
+import paymentpic2 from "./38.webp";
+
 
 // 1kbh
 
@@ -47,8 +48,7 @@ const MasterPlan = () => {
 
 
 
-  // const UNITS = [{ name: "2 BED ", level: "TYPE-1", size: "1,973 STF.", images: [type1, first, type3, type4] }];
-  // const threeBKH = [{ name: "1 BED", level: "TYPE-1", size: "948 STF.", images: [bedtype2, bedtype3] }];
+
 
   return (
     <div style={{ fontFamily: 'Montserrat', }}>
@@ -361,7 +361,7 @@ const MasterPlan = () => {
 
             {/* Description */}
             <p className={`${TEXT_SIZE_CLASS} text-center font-bold   leading-relaxed mb-8`}>
-              The private bedroom zone offers two<br />   elegant rooms with wide windows, smart
+              The private bedroom zone offers two<br />   elegant rooms with wide windows, lgart
               <br /> closets, and shared bathroom access. A <br />  spacious terrace at the rear provides a <br />
               tranquil sit-out area, perfect for unwinding<br />  with forest views or hosting an intimate  <br />
               <span className="block text-center">sunset tea.</span>
@@ -400,7 +400,7 @@ const MasterPlan = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeUp}
-          >
+        >
           {/* Left Side */}
           <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col items-center">
             <img
@@ -457,11 +457,11 @@ const MasterPlan = () => {
       {/* payment plan */}
 
 
-   <motion.div className="w-full min-h-screen bg-white p-8 font-sans text-[#142B2B]"
-       initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}>
+      <motion.div className="w-full min-h-screen bg-white p-8 font-sans text-[#142B2B]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeUp}>
         {/* Birds at top */}
         {/* <div className="flex justify-start mb-4">
           <img src={Birds} alt="Flying birds" className="h-80" />
@@ -472,8 +472,8 @@ const MasterPlan = () => {
           <img src={Logo} alt="Barian Logo" className="h-20 mb-4" />
           <h1 className="text-3xl font-bold mb-1">Barian Pine Lodges</h1>
           <p className="text-lg font-semibold">24 MONTHS PAYMENT PLAN</p>
-          <p className="text-sm text-[#142B2B] mt-1">2 Bed Lodges (Hill &amp; Valley View)</p>
-          <div className="text-sm text-[#142B2B] mt-2">
+          <p className="text-lg text-[#142B2B] mt-1">2 Bed Lodges (Hill &amp; Valley View)</p>
+          <div className="text-lg text-[#142B2B] mt-2">
             <span className="font-bold">Floor Type:</span> Ground Floor to Roof Top (Skyview)<br />
             <span className="font-bold">Covered Area:</span> 1,973 SFT
           </div>
@@ -486,7 +486,7 @@ const MasterPlan = () => {
               <tr>
                 <th
                   colSpan={3}
-                  className="bg-[#e4ddca] p-3 text-center text-sm font-semibold border border-[#ddd]"
+                  className="bg-[#e4ddca] p-3 text-center text-lg font-semibold border border-[#ddd]"
                 >
                   24 MONTHS INSTALLMENT PLAN
                 </th>
@@ -504,9 +504,9 @@ const MasterPlan = () => {
                   key={i}
                   className={i % 2 === 0 ? "bg-white" : "bg-[#f9f6eb]"}
                 >
-                  <td className="p-3 border border-[#ddd] text-sm">{row[0]}</td>
-                  <td className="p-3 border border-[#ddd] text-sm">{row[1]}</td>
-                  <td className="p-3 border border-[#ddd] text-sm">{row[2]}</td>
+                  <td className="p-3 border border-[#ddd] text-lg">{row[0]}</td>
+                  <td className="p-3 border border-[#ddd] text-lg">{row[1]}</td>
+                  <td className="p-3 border border-[#ddd] text-lg">{row[2]}</td>
                 </tr>
               ))}
             </tbody>
@@ -515,11 +515,11 @@ const MasterPlan = () => {
               <tr className="bg-[#f9f6eb] font-bold">
                 <td
                   colSpan={2}
-                  className="p-3 border border-[#ddd] text-right text-sm"
+                  className="p-3 border border-[#ddd] text-right text-lg"
                 >
                   TOTAL PRICE
                 </td>
-                <td className="p-3 border border-[#ddd] text-sm">
+                <td className="p-3 border border-[#ddd] text-lg">
                   PKR 25,050,000/-
                 </td>
               </tr>
@@ -530,7 +530,7 @@ const MasterPlan = () => {
 
         {/* Net Cash Plan */}
         <motion.div className="mb-8 text-lg text-[#142B2B]"
-           initial="hidden"
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeUp}>
@@ -548,7 +548,7 @@ const MasterPlan = () => {
 
         {/* Footer Image */}
         <motion.div className="w-full flex flex-col md:flex-row items-center bg-white overflow-hidden"
-           initial="hidden"
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeUp}>
@@ -724,17 +724,17 @@ const MasterPlan = () => {
 
             {/* Heading */}
             <h2 className={`${HEADING_SIZE_CLASS} text-center  mb-6`}>
-                
+
             </h2>
 
             {/* Description */}
             <p className={`${TEXT_SIZE_CLASS} text-center font-bold  leading-relaxed mb-8`}>
-             Welcoming Designed for functional luxury step <br /> down into the Garden Level and you’re greeted 
-              <br />by an expansive living room with oversizes  <br />windows that frame the surrounding forest 
+              Welcoming Designed for functional luxury step <br /> down into the Garden Level and you’re greeted
+              <br />by an expansive living room with oversizes  <br />windows that frame the surrounding forest
               <br /> canopy. The open layout includes a smart  <br />kitchenette, a convenient  powder room, and a
               <br /> beautiful terrace sit- out  perfect for morning  <br />coffee, reading, or quiet reflection amid the  <br />sounds of nature. This level is
               ideal for entertaining or creating a cozy, self <br />
-              <span className="block text-center">contained living space.</span> 
+              <span className="block text-center">contained living space.</span>
             </p>
 
             {/* Stats */}
@@ -778,7 +778,7 @@ const MasterPlan = () => {
               className="w-full h-auto rounded-md shadow-lg mb-4"
             />
             <p className="text-base md:text-2xl font-bold text-center text-[#142B2B]">
-             “The Forest, Refined.”
+              “The Forest, Refined.”
             </p>
           </div>
 
@@ -799,7 +799,7 @@ const MasterPlan = () => {
 
             {/* Heading */}
             <h2 className={`${HEADING_SIZE_CLASS} text-center  mb-6`}>
-             Forest Level Floor
+              Forest Level Floor
             </h2>
 
             {/* Description */}
@@ -807,7 +807,7 @@ const MasterPlan = () => {
               The Forest Level serves as the primary sleeping<br /> sanctuary. A spacious master bedroom with
               <br /> dedicated dressing area, an attached bathroom, <br />  and a second wide terrace complete the layout <br />
               offering direct connection to the compacted  <br />earth slope and hillside vegetation. The space is  <br />
-             designed to feel immersive, insulated, and deeply relaxing.
+              designed to feel immersive, insulated, and deeply relaxing.
             </p>
 
             {/* Stats */}
@@ -822,127 +822,102 @@ const MasterPlan = () => {
           </div>
         </motion.div>
       </motion.div>
-         {/* payment plan */}
+      {/* payment plan */}
 
 
-      <motion.div className="w-full min-h-screen bg-white p-8 font-sans text-[#142B2B]"
-       initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}>
-        {/* Birds at top */}
-        {/* <div className="flex justify-start mb-4">
-          <img src={Birds} alt="Flying birds" className="h-80" />
-        </div> */}
-
-        {/* Header */}
-        <div className="flex flex-col text-[#142B2B] items-center mb-8">
-          <img src={Logo} alt="Barian Logo" className="h-20 mb-4" />
-          <h1 className="text-3xl font-bold mb-1">24 MONTHS PAYMENT PLAN</h1>
-          {/* <p className="text-lg font-semibold">24 MONTHS PAYMENT PLAN</p> */}
-          <h2 className="text-sm text-[#142B2B] mt-1">1 Bed Lodges (Valley View)</h2>
-          <div className="text-sm text-[#142B2B] mt-2">
-            <span className="font-bold">Floor Type:</span>  Garden & Forest Floors (Valley View)<br />
-            <span className="font-bold">Covered Area:</span>  948 SFT
-          </div>
+      <motion.section
+        className="relative w-full overflow-hidden"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeUp}
+      >
+        {/* 1) Full-width hero image */}
+        <div className="w-full h-auto">
+          <img
+            src={paymentpic2}
+            alt="Barian Pine Lodges Payment Plan"
+            className="w-full object-cover h-[60vh] md:h-[80vh]"
+          />
         </div>
 
-        {/* Installment Table */}
-        <div className="overflow-x-auto mb-8">
-          <table className="w-full table-fixed border-collapse border border-[#ddd] text-[#142B2B]">
-            <thead>
-              <tr>
-                <th
-                  colSpan={3}
-                  className="bg-[#e4ddca] p-3 text-center text-sm font-semibold border border-[#ddd]"
-                >
-                  24 MONTHS INSTALLMENT PLAN
-                </th>
-              </tr>
-            </thead>
+        {/* 2) White paper panel dropped below the image */}
+        <motion.div
+          className="relative w-full bg-white px-8 pt-20 pb-8 -mt-4"
+            initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeUp}
+        >
+          {/* Now your header & table live here */}
+          <div className="flex flex-col items-center mb-8 text-[#142B2B]">
+            <img src={Logo} alt="Barian Logo" className="h-20 mb-4" />
+            <h1 className="text-3xl font-bold mb-1">24 MONTHS PAYMENT PLAN</h1>
+            <h2 className="text-lg mt-1">1 Bed Lodges (Valley View)</h2>
+            <div className="text-lg mt-2">
+              <span className="font-bold">Floor Type:</span> Garden & Forest Floors (Valley View)<br />
+              <span className="font-bold">Covered Area:</span> 948 SFT
+            </div>
+          </div>
 
-            <tbody>
-              {[
-                ["Booking (30%)", "PKR. 3,611,880/-", "PAYABLE AT THE TIME OF BOOKING"],
-                ["Monthly Installments (24%)", "PKR. 96,317/-", "TWENTY FOUR INSTALLMENTS"],
-                ["Quarterly Installments (26%)", "PKR. 451,485/-", "EIGHT INSTALLMENTS"],
-                ["Possession (20%)", "PKR. 3,009,900/-", "PAYABLE UPON FINAL HANDOVER"],
-              ].map((row, i) => (
-                <tr
-                  key={i}
-                  className={i % 2 === 0 ? "bg-white" : "bg-[#f9f6eb]"}
-                >
-                  <td className="p-3 border border-[#ddd] text-sm">{row[0]}</td>
-                  <td className="p-3 border border-[#ddd] text-sm">{row[1]}</td>
-                  <td className="p-3 border border-[#ddd] text-sm">{row[2]}</td>
+          <div className="overflow-x-auto mb-8">
+            <table className="w-full table-fixed border-collapse border border-[#ddd] text-[#142B2B]">
+              <thead>
+                <tr>
+                  <th
+                    colSpan={3}
+                    className="bg-[#e4ddca] p-3 text-center text-lg font-semibold border border-[#ddd]"
+                  >
+                    24 MONTHS INSTALLMENT PLAN
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-
-            <tfoot>
-              <tr className="bg-[#f9f6eb] font-bold">
-                <td
-                  colSpan={2}
-                  className="p-3 border border-[#ddd] text-right text-sm"
-                >
-                  TOTAL PRICE
-                </td>
-                <td className="p-3 border border-[#ddd] text-sm">
-                 PKR. 12,039,600/-
-                </td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-
-
-        {/* Net Cash Plan */}
-        <motion.div className="mb-8 text-lg flex flex-col justify-center items-center text-[#142B2B]"
-           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}>
-          <h2 className="font-semibold  mb-2">Net Cash Payment Plan (Optional)</h2>
-          <ul className="list-disc list-inside space-y-1">
-            <li>Total price with 5% discount.</li>
-            <li>Flexible payment terms available upon request.</li>
-            <li>
-              <span className="font-semibold"> Fast‐track delivery available:</span> Lodges can be handed over within{" "}
-              <span className="font-semibold">4 to 6 months</span>, subject to
-              availability and agreement.
-            </li>
-          </ul>
-        </motion.div >
-
-        {/* Footer Image */}
-        {/* <motion.div  className="w-full flex flex-col md:flex-row items-center bg-white overflow-hidden"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}> */}
-          {/* Text Column */}
-          {/* <div className="w-full md:w-1/2  bg-opacity-60 p-8 md:p-16">
-            <h3 className="text-2xl text-center md:text-3xl font-semibold text-[#142B2B] mb-4">
-              Fully Furnished, Move-In Ready Lodges
-            </h3>
-            <p className="text-base text-center md:text-xl text-[#142B2B] leading-relaxed">
-              Each lodge is delivered fully furnished, designed <br /> to offer a complete turnkey lifestyle.
-              From elegant <br /> interiors and premium furniture to fully fixed <br /> kitchens and modern appliances,
-              every unit is <br /> thoughtfully curated to provide the comfort, <br /> convenience, and luxury of a private
-              mountain <br /> retreat — right from day one.
-            </p>
-          </div> */}
-
-          {/* Image Column */}
-          {/* <div className="w-full md:w-1/2 h-auto">
-            <img
-              src={paymentpic}
-              alt="Fully furnished lodge"
-              className="w-full h-full object-cover"
-            />
+              </thead>
+              <tbody>
+                {[
+                  ["Booking (30%)", "PKR. 3,611,880/-", "PAYABLE AT THE TIME OF BOOKING"],
+                  ["Monthly Installments (24%)", "PKR. 96,317/-", "TWENTY FOUR INSTALLMENTS"],
+                  ["Quarterly Installments (26%)", "PKR. 451,485/-", "EIGHT INSTALLMENTS"],
+                  ["Possession (20%)", "PKR. 3,009,900/-", "PAYABLE UPON FINAL HANDOVER"],
+                ].map((row, i) => (
+                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-[#f9f6eb]"}>
+                    <td className="p-3 border border-[#ddd] text-lg">{row[0]}</td>
+                    <td className="p-3 border border-[#ddd] text-lg">{row[1]}</td>
+                    <td className="p-3 border border-[#ddd] text-lg">{row[2]}</td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr className="bg-[#f9f6eb] font-bold">
+                  <td colSpan={2} className="p-3 border border-[#ddd] text-right text-lg">
+                    TOTAL PRICE
+                  </td>
+                  <td className="p-3 border border-[#ddd] text-lg">PKR. 12,039,600/-</td>
+                </tr>
+              </tfoot>
+            </table>
           </div>
-        </motion.div > */}
-      </motion.div>
+
+          {/* Net Cash Plan */}
+          <motion.div
+            className="mb-8 text-lg flex flex-col items-center text-[#142B2B]"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+          >
+            <h2 className="font-semibold mb-2">Net Cash Payment Plan (Optional)</h2>
+            <ul className="list-disc list-inside space-y-1">
+              <li>Total price with 5% discount.</li>
+              <li>Flexible payment terms available upon request.</li>
+              <li>
+                <span className="font-semibold">Fast‐track delivery available:</span> Lodges can be handed over within{" "}
+                <span className="font-semibold">4 to 6 months</span>, subject to availability and agreement.
+              </li>
+            </ul>
+          </motion.div>
+        </motion.div>
+      </motion.section>
+
 
     </div>
   );

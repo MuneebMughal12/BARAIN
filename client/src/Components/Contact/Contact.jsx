@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 const Forms = () => {
   const [formData, setFormData] = useState({
@@ -40,6 +41,22 @@ const Forms = () => {
       alert("Failed to send email.");
     }
   };
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -40 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+  const fadeRight = {
+    hidden: { opacity: 0, x: 40 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
     <div style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
 
@@ -59,7 +76,12 @@ const Forms = () => {
       {/* Contact Section */}
       <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
         {/* Address and Info */}
-        <div className="bg-white text-black p-8 rounded-lg shadow-2xl h-full">
+        <motion.div className="bg-white text-black p-8 rounded-lg shadow-2xl h-full"
+           initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeLeft}
+          >
           <h2 className="text-[1.7rem] font-semibold mb-4">Contact Information</h2>
           <p className="mb-2 text-2xl font-bold">Address:</p>
           <p className="text-lg">Plot No.9587, Block No.14, Section No.180, Kwabenya, District 006,
@@ -67,7 +89,7 @@ const Forms = () => {
 
           <p className="mt-4 text-2xl font-bold">Phone/WhatsApp:</p>
           <p className="text-lg">+92-333-3404585 <br />
-              +92-308-8528128
+            +92-308-8528128
           </p>
 
           <p className="mt-4 text-2xl font-bold">Email:</p>
@@ -85,10 +107,14 @@ const Forms = () => {
               <FaTwitter />
             </a>
           </div>
-        </div>
+        </motion.div >
 
         {/* Contact Form */}
-        <div className="bg-white text-black p-8 rounded-lg shadow-2xl h-full">
+        <motion.div className="bg-white text-black p-8 rounded-lg shadow-2xl h-full"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeRight}>
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
           <form onSubmit={(e) => handleSubmit(e, "contact")}>
             <div className="grid grid-cols-2 gap-4">
@@ -141,7 +167,7 @@ const Forms = () => {
               Submit
             </button>
           </form>
-        </div>
+        </motion.div >
       </div>
 
       {/* Google Map */}

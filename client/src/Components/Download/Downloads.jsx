@@ -5,6 +5,7 @@ import { GiStoneStack, GiMountainCave } from "react-icons/gi";
 import { MdEngineering } from "react-icons/md";
 import Logo from "./Logo.webp"
 import bgteam from "./team.webp"
+import company from "./company.png";
 
 const teamRoles = [
   { icon: <MdEngineering className="text-[#c08d31] text-4xl" />, title: "MEP TEAM" },
@@ -14,6 +15,22 @@ const teamRoles = [
   { icon: <FaHardHat className="text-[#c08d31] text-4xl" />, title: "ARCHITECT TEAM" },
   { icon: <FaProjectDiagram className="text-[#c08d31] text-4xl" />, title: "STRUCTURAL TEAM" },
 ];
+const fadeLeft = {
+  hidden: { opacity: 0, x: -40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+const fadeRight = {
+  hidden: { opacity: 0, x: 40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 const Downloads = () => {
   return (
@@ -43,7 +60,11 @@ const Downloads = () => {
         {/* Main Grid */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Side: Description */}
-          <div className="p-6 space-y-6">
+          <motion.div className="p-6 space-y-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeLeft}>
             <h2 className="text-3xl font-bold tracking-wide">PROJECT TEAM</h2>
             <p className="text-xl leading-relaxed">
               At Sapphire , we have partnered with leading architects , structural
@@ -60,10 +81,14 @@ const Downloads = () => {
               develop, build, and deliver — all under the trusted name of Sapphire
             </p>
 
-          </div>
+          </motion.div>
 
           {/* Right Side: Team Icons */}
-          <div className="flex flex-col gap-8 items-center justify-center text-center">
+          <motion.div className="flex flex-col gap-8 items-center justify-center text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeRight}>
             {teamRoles.map((role, idx) => (
               <div key={idx} className="flex flex-col items-center gap-2">
                 <div className="text-yellow-500 text-5xl">{role.icon}</div>
@@ -72,7 +97,7 @@ const Downloads = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </motion.div>
 
 
         </div>
@@ -83,14 +108,17 @@ const Downloads = () => {
           <div className="text-white font-semibold">
             <img
               src={Logo}
-              alt="VALOR VISTA"
+              alt="barian logo"
               className="h-24 w-24 object-contain"
             />
 
           </div>
           <div className="text-center md:text-right">
-            <h3 className="text-lg font-bold">GEoCon</h3>
-            <p className="text-xs tracking-widest">SECURE. AFFORDABLE. COMFORT</p>
+            <img
+              src={company}
+              alt="company logo"
+              className="h-32 w-32 object-contain"
+            />
           </div>
         </div>
       </section>
