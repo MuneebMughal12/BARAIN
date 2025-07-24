@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import axios from "axios";
 import { motion } from "framer-motion";
 
@@ -83,7 +83,10 @@ const Forms = () => {
           variants={fadeLeft}
           >
           <h2 className="text-[1.7rem] font-semibold mb-4">Contact Information</h2>
-          <p className="mb-2 text-2xl font-bold">Address:</p>
+
+          <p className="mb-2 text-2xl font-bold">Office Address:</p>
+          <p className="text-lg">House No.1874-C, Main, 3 Double Road, I-14, Islamabad, 44000, Pakistan </p>
+          <p className="mb-2 text-2xl font-bold">Side Address:</p>
           <p className="text-lg"> Mohra Bhatian, Murree, 47150, Pakistan</p>
 
           <p className="mt-4 text-2xl font-bold">Phone/WhatsApp:</p>
@@ -96,14 +99,14 @@ const Forms = () => {
 
           <p className="mt-4 text-3xl font-bold">Social Media:</p>
           <div className="flex space-x-4 mt-2">
-            <a href="#" className="text-4xl text-blue-600 hover:text-blue-800">
+            <a href="https://www.facebook.com/Geogroupofcompanies2022" className="text-4xl text-blue-600 hover:text-blue-800">
               <FaFacebook />
             </a>
-            <a href="#" className="text-4xl text-pink-600 hover:text-pink-800">
+            <a href="https://www.instagram.com/geocon_enterprises" className="text-4xl text-pink-600 hover:text-pink-800">
               <FaInstagram />
             </a>
-            <a href="#" className="text-4xl text-blue-400 hover:text-blue-600">
-              <FaTwitter />
+            <a href="https://www.tiktok.com/@geocone_enterprises?is_from_webapp=1&sender_device=pc" className="text-4xl text-black hover:text-pink-600">
+              <FaTiktok />
             </a>
           </div>
         </motion.div >

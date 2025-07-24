@@ -18,8 +18,9 @@ const Footer = () => {
               +92-308-8528128</p>
             <p className="text-xl"><strong>Social networks @ :</strong>barainpinelodges </p>
             <p className="text-xl"><strong>EMAIL :</strong> <a href="mailto:geoconenterprises@outlook.com" className="underline">geoconenterprises@outlook.com</a></p>
-
-            <p className="mt-2 text-xl"><strong>ADDRESS :</strong></p>
+            <p className=" mt-2 text-2xl font-bold">Office Address:</p>
+            <p className="text-lg">House No.1874-C, Main, 3 Double Road, I-14, Islamabad, 44000, Pakistan </p>
+            <p className="mt-2 text-xl"><strong>Side Address:</strong></p>
             <p className="text-lg">Mohra Bhatian, Murree, 47150, Pakistan</p>
             {/* <p className="text-lg">Shewn Edgeed Pink, North Airport Residential,</p> */}
             {/* <p className="text-lg">Region Greater Accra, Ghanna</p> */}
@@ -29,11 +30,11 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex justify-center md:justify-start space-x-6 mt-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/Geogroupofcompanies2022" target="_blank" rel="noopener noreferrer">
               <FaFacebookF size={29} className="hover:text-gray-500 transition duration-300" />
             </a>
 
-            <a href="https://www.youtube.com/embed/dwtyeZi1328" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@Geogroupofcompanies" target="_blank" rel="noopener noreferrer">
               <FaYoutube size={29} className="hover:text-gray-500 transition duration-300" />
             </a>
           </div>
@@ -43,13 +44,14 @@ const Footer = () => {
         <div className="mt-10  md:mt-0">
           <iframe
             title="Facebook Page"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FYourPageURL&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGeogroupofcompanies2022&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
             width="340"
             height="500"
             style={{ border: "none", overflow: "hidden" }}
             scrolling="no"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowFullScreen={true}
           ></iframe>
         </div>
       </div>
