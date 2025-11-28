@@ -113,7 +113,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.9 }}
           className="mt-6 bg-[#324158] px-6 py-3 rounded-lg text-white font-semibold hover:bg-[#c08d31] transition-all text-lg sm:text-xl"
-          onClick={() => window.open("https://wa.me/+233240301874", "_blank")}
+          onClick={() => window.open("https://wa.me/+923333404585", "_blank")}
         >
           WhatsApp Us
         </motion.button>
