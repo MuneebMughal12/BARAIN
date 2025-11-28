@@ -45,7 +45,7 @@ const Forms = () => {
     <div className="bg-black mt-1 font-montserrat">
       <div className="w-full bg-[#142B2B] py-10 px-4 sm:px-10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
-          
+
           {/* YouTube Video */}
           <motion.div
             className="w-full"
@@ -55,15 +55,16 @@ const Forms = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 text-center lg:text-left">
-              VALOR VISTA
+              BARIAN
             </h2>
             <div className="relative aspect-video">
               <iframe
                 className="w-full h-full rounded-lg shadow-lg"
-                src="https://www.youtube.com/embed/oZQFdHc-voo"
+                src="https://www.youtube.com/embed/_jdutl7J3x8"
                 title="VALOR VISTA Video"
                 allowFullScreen
-              />
+              ></iframe>
+
             </div>
           </motion.div>
 
