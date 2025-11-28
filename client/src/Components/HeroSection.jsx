@@ -113,7 +113,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.9 }}
           className="mt-6 bg-[#324158] px-6 py-3 rounded-lg text-white font-semibold hover:bg-[#c08d31] transition-all text-lg sm:text-xl"
-          onClick={() => window.open("https://wa.me/+923333404585", "_blank")}
+          onClick={() => window.open("https://wa.me/+923088528128", "_blank")}
         >
           WhatsApp Us
         </motion.button>
@@ -121,7 +121,7 @@ const HeroSection = () => {
 
       {/* Sticky WhatsApp Button */}
       <a
-        href="https://wa.me/+233240301874"
+        href="https://wa.me/+923088528128"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-4 right-2 sm:bottom-6 sm:right-6 bg-green-500 p-3 sm:p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50"
