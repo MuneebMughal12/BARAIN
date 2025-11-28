@@ -83,7 +83,7 @@ const HeroSection = () => {
             textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px",
           }}
         >
-          BARAIN
+          BARIAN
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 50 }}

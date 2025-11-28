@@ -30,11 +30,11 @@ const AboutSection = () => {
         variants={panelVariants}
       >
         <h2 className="text-xl sm:text-3xl md:text-3xl font-semibold tracking-wide text-center sm:text-left leading-tight">
-          WHY BARAIN?
+          WHY BARIAN?
         </h2>
 
         <p className="text-lg sm:text-base md:text-xl text-center sm:text-left leading-relaxed">
-          THE BARAIN & Luxury Suites is a high-rise, state-of-the-Art building providing
+          THE BARIAN & Luxury Suites is a high-rise, state-of-the-Art building providing
           <br />
           <span className="font-semibold">PREMIUM AND FUTURISTIC LIFESTYLE!</span>
         </p>
