@@ -26,11 +26,11 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex justify-center md:justify-start space-x-6 mt-4">
-            <a href="https://youtu.be/_jdutl7J3x8?si=uyVCl2BrZdTBbts2" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/barianpinelodgesmurree" target="_blank" rel="noopener noreferrer">
               <FaFacebookF size={29} className="hover:text-gray-500 transition duration-300" />
             </a>
 
-            <a href="https://www.youtube.com/@Geogroupofcompanies" target="_blank" rel="noopener noreferrer">
+            <a href="https://youtu.be/_jdutl7J3x8?si=uyVCl2BrZdTBbts2" target="_blank" rel="noopener noreferrer">
               <FaYoutube size={29} className="hover:text-gray-500 transition duration-300" />
             </a>
           </div>
