@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="mt-4 text-sm">
             <p className="text-xl"><strong>CALL :</strong> +92-333-3404585 <br />
               +92-308-8528128</p>
-            <p className="text-xl"><strong>Social networks @ :</strong>barainpinelodges </p>
+            {/* <p className="text-xl"><strong>Social networks @ :</strong>barainpinelodges </p> */}
             <p className="text-xl"><strong>EMAIL :</strong> <a href="mailto:geoconenterprises@outlook.com" className="underline">geoconenterprises@outlook.com</a></p>
             <p className=" mt-2 text-2xl font-bold">Office Address:</p>
             <p className="text-lg">House No.1874-C, Main, 3 Double Road, I-14, Islamabad, 44000, Pakistan </p>
